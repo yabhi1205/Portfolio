@@ -145,7 +145,7 @@ nav .links {
     left: 0%;
   }
 }
-@media (max-width:900px) {
+@media (max-width:1050px) {
     nav{
         width: 50vw;
         right: -50vw;
@@ -164,5 +164,25 @@ nav .links {
     }
     .pattern{
         left: -50vw;
+    }
+    .logo h2{
+        font-size: 7vw;
+    }
+}
+@media (max-width:450px) {
+    .logo h2{
+        font-size: 5vw;
+    }
+    .pattern{
+        left: -90vw;
+    }
+    .head-right{
+        position: absolute;
+        bottom: 80px;
+        left: 8px;
+        /* width: 80vw; */
+    }
+    .head-right h1 {
+        font-size: 5vw;
     }
 }
