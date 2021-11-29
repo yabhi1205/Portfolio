@@ -1,95 +1,161 @@
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Roboto+Mono:ital,wght@1,200;1,700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    font-family: 'Roboto Mono', monospace;
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Roboto+Mono:ital,wght@1,200;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Roboto Mono", monospace;
 }
-header{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: #140c19;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    overflow: hidden;
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.pattern{
-    width: 60vw;
-    height: 100vh;
-    position: absolute;
-    bottom: 0vw;
-    left: -20vw;
-    border-right: 60vh transparent solid;
-    border-bottom: 100vh white solid;
-    background-color: transparent;
-    overflow: hidden;
+header {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #140c19;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  transition: 0.8s ease;
+  position: relative;
 }
-.head-left{
-    width: 35vw;
+header .fas {
+  font-size: 2em;
+  position: fixed;
+  top: 1.5em;
+  right: 1.5em;
+  cursor: pointer;
+  color: white;
 }
-.head-right{
-    z-index: 1;
-    width: 50vw;
-    text-align: center;
+nav {
+  width: 30vw;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/background-header.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  right: -30vw;
+  flex-direction: column;
+  box-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white;
+  z-index: 10;
+  transition: 0.8s ease;
 }
-.head-right h1{
-    font-size: 4em;
-    color: black;
-    /* text-shadow: 1px 1px 5px white,-1px -1px 5px white; */
-    font-weight: 900;
-    z-index: 2000;
+nav .image {
+  height: 80%;
+  position: absolute;
+  top: 80px;
+  filter: blur(3px);
+  z-index: -1;
+}
+nav .fas {
+  font-size: 2em;
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em;
+  cursor: pointer;
+  color: black;
+}
+nav .logo {
+  color: white;
+  font-size: 2.4em;
+  letter-spacing: 0.187em;
+  cursor: pointer;
+}
+nav .links {
+  margin-top: 250px;
+}
+.links li {
+  font-size: 1.5em;
+  margin: 10px;
+  cursor: pointer;
+}
+.links li a{
+    text-decoration: none;
+    color: white;
+}
+.pattern {
+  width: 60vw;
+  height: 100vh;
+  position: absolute;
+  bottom: 0vw;
+  left: -20vw;
+  border-right: 60vh transparent solid;
+  border-bottom: 100vh white solid;
+  background-color: transparent;
+  overflow: hidden;
+}
+.head-left {
+  width: 35vw;
+}
+.head-right {
+  z-index: 1;
+  width: 50vw;
+  text-align: center;
+}
+.head-right h1 {
+  font-size: 4em;
+  color: black;
+  font-weight: 900;
+  z-index: 2000;
+}
+.head-right h2 {
+  font-size: 3em;
+  color: #1e7eb0;
+}
 
+.head-left img {
+  height: 80vh;
 }
-.head-right h2{
-    font-size: 3em;
-    color: #1e7eb0;
+.h-r-intro {
+  display: flex;
+  justify-content: center;
 }
-
-.head-left img{
-    height: 80vh;
+.h-r-intro ul {
+  overflow: hidden;
+  height: 3.5em;
 }
-.h-r-intro{
-    display: flex;
-    justify-content: center;
-    /* border: 1px solid white; */
-}
-.h-r-intro ul{
-    overflow: hidden;
-    height: 3.5em;
-}
-.h-r-intro li{
-    margin-left: 20px;
-    list-style: none;
-    color: burlywood;
-    font-size: 3em;
-    font-weight: 600;
-    text-align: left;
-    position: relative;
-    top: 0px;
-    animation: roll 9s steps(3)  infinite;
+.h-r-intro li {
+  margin-left: 20px;
+  list-style: none;
+  color: burlywood;
+  font-size: 3em;
+  font-weight: 600;
+  text-align: left;
+  position: relative;
+  top: 0px;
+  animation: roll 18s steps(3) infinite;
 }
 @keyframes roll {
-   100%{
-       top: -190px;
-   }
+  100% {
+    top: -190px;
+  }
 }
-.h-r-intro li::after{
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    border-left:2px solid burlywood ;
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: wrap 3s steps(17) infinite ;
+.h-r-intro li::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-left: 2px solid burlywood;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: wrap 6s steps(17) infinite;
 }
 @keyframes wrap {
-    100%{
-        left: 100%;
-    }
+  0% {
+    left: 0%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
 }
