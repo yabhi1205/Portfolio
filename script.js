@@ -10,7 +10,7 @@ onav.addEventListener('click',()=>{
     allbdy.style.filter="blur(3px)"
 })
 cnav.addEventListener('click',()=>{
-    nav.style.right="-30vw"
+    nav.style.right="-60vw"
     // header.style.right="0vw"
     allbdy.style.filter="none"
 })
