@@ -1,3 +1,8 @@
+// =================pre loader======================== 
+var loader = document.querySelector(".preloader");
+window.addEventListener("load",()=>{
+    loader.style.display="none";
+})
 let onav=document.getElementById("open-nav");
 let cnav=document.getElementById("close-nav");
 let allbdy=document.getElementById("section");

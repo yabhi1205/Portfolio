@@ -5,6 +5,14 @@
   overflow-x: hidden;
   font-family: "Roboto Mono", monospace;
 }
+.preloader{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: black url(../images/loader.gif) no-repeat center center ;
+  z-index: 999;
+  display: block;
+}
 .center {
   display: flex;
   justify-content: center;
@@ -70,7 +78,7 @@ nav .links {
     text-decoration: none;
     color: white;
 }
-.pattern {
+/* .pattern {
   width: 60vw;
   height: 100vh;
   position: absolute;
@@ -80,7 +88,7 @@ nav .links {
   border-bottom: 100vh white solid;
   background-color: transparent;
   overflow: hidden;
-}
+} */
 .head-right {
   z-index: 1;
   text-align: center;
