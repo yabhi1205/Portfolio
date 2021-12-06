@@ -5,6 +5,7 @@
   overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
+  scroll-behavior: smooth;
 }
 :root{
   --base :#140a15;
@@ -20,6 +21,7 @@
   justify-content: center;
   align-items: center;
 }
+/* .preloader ----------------------------------- */
 .preloader{
   position: fixed;
   width: 100vw;
@@ -37,6 +39,7 @@ header{
   justify-content: space-around;
   align-items: center;
   position: relative;
+  text-align: center;
 }
 header h2{
   font-size: 2.5rem;

@@ -20,6 +20,9 @@
         header{
             flex-direction: column;
         }
+        header img{
+            height: 50%;
+        }
         
 }
 
