@@ -21,6 +21,7 @@
   justify-content: center;
   align-items: center;
 }
+
 /* .preloader ----------------------------------- */
 .preloader{
   position: fixed;
@@ -40,6 +41,18 @@ header{
   align-items: center;
   position: relative;
   text-align: center;
+  z-index: 999;
+  overflow: hidden;
+}
+.shape1{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  display: block;
+  clip-path: polygon(40% 0, 76% 0, 52% 100%, 14% 100%);
 }
 header h2{
   font-size: 2.5rem;
@@ -49,11 +62,13 @@ header img{
 }
 header ion-icon {
   color: var(--text1);
+  text-align: center;
   position: absolute;
   bottom: 20px;
-  right: 50%;
+  left: 50%;
   font-size: 2.5rem;
   cursor: pointer;
+  transform: translateY();
 }
 header ul{
   margin: 0;padding: 0;
@@ -63,6 +78,7 @@ header ul{
   position: relative;
 }
 header li{
+  list-style: none;
   position: relative;
   font-size: 2.5rem;
   color: var(--shade3);
@@ -78,28 +94,53 @@ header li::after{
   border-left: 2px solid var(--shade3);
 }
 /* main =================================== */
+main{
+  position: relative;
+  height: 200vh;
+  
+}
 /* head ================================= */
 nav{
-  width: 100vw;
+  width: 99vw;
   height: 70px;
-  border: 1px solid black;
+  background: rgb(57,2,255);
+  background: linear-gradient(15deg, rgba(57,2,255,1) 0%, rgba(129,232,189,1) 100%);
+  position: fixed;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
+  backdrop-filter: blur(10px);
   overflow: hidden;
 }
 .logo img{
   height: 70px;
 }
 nav ul{
-  display: flex;
+  height: 100%;
+  /* flex-direction: column; */
 }
 nav li{
   list-style: none;
 }
-nav a{
+nav ul a{
+  display: flex;
+  height: 70px;
+  width: 70px;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  color: var(--shade2);
+  color: var(--shade3);
   margin: 0 10px;
+}
+nav ul a:hover{
+  background-color: var(--shade3);
+  border-radius: 0 0 20px 20px;
+  color: var(--shade1);
+}
+nav ul a.active{
+  background-color: var(--shade3);
+  border-radius: 0 0 20px 20px;
+  color: var(--shade1);
 }
