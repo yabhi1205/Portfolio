@@ -41,7 +41,7 @@ header{
   align-items: center;
   position: relative;
   text-align: center;
-  z-index: 999;
+  z-index: 99;
   overflow: hidden;
 }
 .shape1{
@@ -97,6 +97,7 @@ header li::after{
 main{
   position: relative;
   height: 200vh;
+  padding-top: 70px;
   
 }
 /* head ================================= */
@@ -119,7 +120,6 @@ nav{
 }
 nav ul{
   height: 100%;
-  /* flex-direction: column; */
 }
 nav li{
   list-style: none;
@@ -143,4 +143,100 @@ nav ul a.active{
   background-color: var(--shade3);
   border-radius: 0 0 20px 20px;
   color: var(--shade1);
+}
+/* skills==================================== */
+.skills{
+  width: 100vw;
+  height: 100vh;
+  /* background-color: wheat; */
+}
+.s-box{
+  width: 80%;
+  height: 70%;
+  background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+border-radius: 10px;
+box-shadow: 0 0 20px black;
+}
+
+.skill-left,
+.skill-right{
+  width: 48%;
+  height: 100%;
+  margin: 0 12px;
+  flex-direction: column;
+}
+.skill{
+  height: 30%;
+  width: 100%;
+  margin-top: 5px;
+  padding: auto;
+  padding-top: 10%;
+}
+.skill h3{
+  margin-bottom: 30px;
+}
+.skill ion-icon,
+.skill i,
+.skill span{
+  font-size: var(--text1);
+  color: var(--shade3);
+  margin-right: 5px;
+  font-weight: 700;
+}
+.progress{
+  position: relative;
+  cursor: pointer;
+  z-index: 0!important;
+}
+.progress::after{
+  content: "";
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 82%, rgba(0,212,255,0.23573179271708689) 100%);
+  /* border-right: 1px solid black; */
+}
+
+.progress::before{
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background-color:transparent;
+  border-right: 3px solid black;
+}
+/* html */
+.pro-1::after,
+.pro-1::before{
+  width: 90%;
+}
+/* css  */
+.pro-2::after,
+.pro-2::before{
+  width: 65%;
+}
+/* js  */
+.pro-3::after,
+.pro-3::before{
+  width: 55%;
+}
+/* c  */
+.pro-4::after,
+.pro-4::before{
+  width: 55%;
+}
+/* java  */
+.pro-5::after,
+.pro-5::before{
+  width: 40%;
+}
+/* edit */
+.pro-6::after,
+.pro-6::before{
+  width: 50%;
 }

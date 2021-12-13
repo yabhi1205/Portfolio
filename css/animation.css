@@ -36,3 +36,38 @@ header li{
         top: -162px;
     }
 }
+.progress::after{
+    animation: cameright 10s  infinite;
+}
+@keyframes cameright {
+    0%{
+        left: -100%;
+    }
+    40%{
+        left: 0px;
+    }
+    70%{
+        left: 0%;
+    }
+    90%{
+        left: -100%;
+    }
+}
+.progress::before{
+    animation: cameright1 10s  infinite;
+}
+@keyframes cameright1 {
+    0%{
+        left: -100%;
+    }
+    40%{
+        left: 10px;
+    }
+    70%{
+        left: 10px;
+    }
+    
+    100%{
+        left: -100%;
+    }
+}
