@@ -63,8 +63,11 @@ header li{
     40%{
         left: 10px;
     }
+    41%{
+        left: 0px;
+    }
     70%{
-        left: 10px;
+        left: 0px;
     }
     
     100%{

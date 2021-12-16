@@ -29,6 +29,11 @@
         .shape1{
             display: none;
         }
-        
+        .s-box{
+            flex-direction: column;
+        }
+        .s-box::after{
+            top: 20%;
+        }
 }
 

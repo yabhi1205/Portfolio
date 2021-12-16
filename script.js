@@ -28,15 +28,15 @@ let js = document.getElementById("js-skill");
 let cLanguage = document.getElementById("c-skill");
 let java = document.getElementById("java-skill");
 let edit = document.getElementById("edit-skill");
-setInterval(run,10050)
+setInterval(run,11050)
 function run(){
-    let time = setInterval(showword,100);
     count1=0;
     count2=0;
     count3=0;
     count4=0;
     count5=0;
     count6=0;
+    let time = setInterval(showword,100);
 }
 function showword() {
     if(count1<90){
