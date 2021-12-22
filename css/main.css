@@ -59,7 +59,7 @@ nav {
 nav .nav {
   height: 100vh;
   width: 30rem;
-  background-color: grey;
+  background-color: #5c97f0;
   display: grid;
   grid-template-rows: repeat(6, 1fr);
   padding: 15rem 0;
@@ -111,7 +111,7 @@ nav .active b:nth-child(1)::after {
   width: 100%;
   height: 3rem;
   border-bottom-right-radius: 2rem;
-  background-color: grey;
+  background-color: #5c97f0;
 }
 nav .active b:nth-child(3) {
   position: absolute;
@@ -127,7 +127,7 @@ nav .active b:nth-child(3):after {
   width: 100%;
   height: 3rem;
   border-top-right-radius: 2rem;
-  background-color: grey;
+  background-color: #5c97f0;
 }
 nav .active a {
   color: black;
