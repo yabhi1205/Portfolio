@@ -1,0 +1,519 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --base: #140a15;
+  --black: #0b0404;
+  --shade1: #2d0407;
+  --shade2: #ef3513;
+  --shade3: #d70607;
+  --shade4: #4b040d;
+  --text1: white;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* .preloader ----------------------------------- */
+.preloader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: var(--black) url(../images/loader.gif) no-repeat center center;
+  z-index: 999;
+  display: block;
+}
+
+/* ==============nav====================== */
+nav {
+  height: 100vh;
+  width: 30rem;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
+  -webkit-transition: 0.4s all ease;
+  transition: 0.4s all ease;
+}
+nav .nav {
+  height: 100vh;
+  width: 30rem;
+  background-color: grey;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  padding: 15rem 0;
+}
+nav .toggle {
+  position: absolute;
+  top: 2rem;
+  left: 45%;
+  cursor: pointer;
+}
+nav .toggle #close {
+  display: block;
+  font-size: 4rem;
+  color: #921010;
+}
+nav .toggle #open {
+  display: none;
+  font-size: 4rem;
+  color: #880f0f;
+}
+nav .link {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 4rem;
+  padding-left: 4rem;
+  border-radius: 4rem 0 0 4rem;
+}
+nav .active {
+  background-color: white;
+  position: relative;
+  overflow: visible;
+}
+nav .active b:nth-child(1) {
+  position: absolute;
+  top: -3rem;
+  width: 22rem;
+  height: 3rem;
+  background-color: white;
+}
+nav .active b:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 3rem;
+  border-bottom-right-radius: 2rem;
+  background-color: grey;
+}
+nav .active b:nth-child(3) {
+  position: absolute;
+  width: 22rem;
+  height: 3rem;
+  background-color: white;
+  bottom: -3rem;
+}
+nav .active b:nth-child(3):after {
+  content: "";
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 3rem;
+  border-top-right-radius: 2rem;
+  background-color: grey;
+}
+nav .active a {
+  color: black;
+}
+nav a {
+  font-size: 2rem;
+  text-decoration: none;
+  letter-spacing: 0.5rem;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+nav a i {
+  font-size: 3rem;
+  padding-right: 2rem;
+  color: black;
+}
+
+.nav1 {
+  width: 10rem;
+}
+.nav1 .link {
+  margin-left: 1rem;
+  padding-left: 3rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+.nav1 .active b:nth-child(1),
+.nav1 .active b:nth-child(3) {
+  width: 6rem;
+}
+.nav1 a {
+  text-align: left;
+}
+.nav1 a i {
+  display: block;
+}
+.nav1 a h2 {
+  display: none;
+}
+
+/* ==============header====================== */
+header {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header-bc {
+  width: 100vw;
+  height: 95vh;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, transparent), to(white)), url("../images/header-bc.jpeg") fixed center center;
+  background: linear-gradient(transparent 80%, white), url("../images/header-bc.jpeg") fixed center center;
+  background-size: cover;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+}
+
+.header-cloud {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+}
+
+.header-cloud img {
+  position: absolute;
+  bottom: 0;
+  height: 30rem;
+}
+
+.header-strip {
+  width: 5vw;
+  height: 95vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, rgba(255, 255, 255, 0.301)), to(transparent));
+  background: linear-gradient(rgba(255, 255, 255, 0.301) 70%, transparent);
+  z-index: 10;
+}
+
+.header-strip i {
+  margin: 12px 0;
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+.header-strip:nth-child(1) {
+  color: black;
+}
+
+.header-text {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+}
+
+.header-text h1 {
+  font-size: 10rem;
+  letter-spacing: 1rem;
+  color: var(--shade4);
+  font-family: "Vujahday Script", cursive;
+  overflow: hidden;
+}
+
+.header-text h2 {
+  font-size: 6rem;
+  text-align: left;
+  letter-spacing: 1rem;
+  color: var(--shade4);
+  font-family: "Vujahday Script", cursive;
+  overflow: hidden;
+}
+
+#passion {
+  color: var(--shade3);
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  font-size: 3rem;
+}
+
+/* 
+header {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--base);
+  color: var(--text1);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  z-index: 99;
+  overflow: hidden;
+}
+.shape1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+  display: block;
+  clip-path: polygon(40% 0, 76% 0, 52% 100%, 14% 100%);
+}
+header h2 {
+  font-size: 2.5rem;
+}
+header img {
+  height: 70%;
+}
+header ion-icon {
+  color: var(--text1);
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transform: translateY();
+}
+header ul {
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  height: 54px;
+  overflow: hidden;
+  position: relative;
+}
+header li {
+  list-style: none;
+  position: relative;
+  font-size: 2.5rem;
+  color: var(--shade3);
+}
+header li::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--base);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 2px solid var(--shade3);
+}*/
+/* main =================================== 
+main {
+  position: relative;
+  height: 200vh;
+  padding-top: 70px;
+  background-color: var(--base);
+}
+/* head ================================= *
+nav {
+  width: 99vw;
+  height: 70px;
+  background: rgb(57, 2, 255);
+  background: linear-gradient(
+    15deg,
+    rgba(57, 2, 255, 1) 0%,
+    rgba(129, 232, 189, 1) 100%
+  );
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  z-index: 10;
+}
+.logo img {
+  height: 70px;
+}
+nav ul {
+  height: 100%;
+}
+nav li {
+  list-style: none;
+}
+nav ul a {
+  display: flex;
+  height: 70px;
+  width: 70px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--shade3);
+  margin: 0 10px;
+}
+nav ul a:hover {
+  background-color: var(--shade3);
+  border-radius: 0 0 20px 20px;
+  color: var(--shade1);
+}
+nav ul a.active {
+  background-color: var(--shade3);
+  border-radius: 0 0 20px 20px;
+  color: var(--shade1);
+}
+/* skills==================================== */
+.skills {
+  width: 100vw;
+  height: 100vh;
+  /* background-color: wheat; */
+}
+
+.s-box {
+  min-width: 80%;
+  min-height: 70%;
+  background: #eeaeca;
+  background: radial-gradient(circle, #eeaeca 0%, #94bbe9 100%);
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 20px black;
+          box-shadow: 0 0 20px black;
+  position: relative;
+  overflow: hidden;
+}
+
+.s-box::after {
+  content: "SKILLS";
+  color: var(--black);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  font-size: 10rem;
+  font-weight: bold;
+  -webkit-filter: opacity(0.2);
+          filter: opacity(0.2);
+  text-align: right;
+  right: 10%;
+  z-index: 0;
+}
+
+.skill-left,
+.skill-right {
+  width: 48%;
+  height: 100%;
+  margin: 0 12px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.skill {
+  height: 30%;
+  width: 100%;
+  margin-top: 5px;
+  padding: auto;
+  padding-top: 10%;
+}
+
+.skill h3 {
+  margin-bottom: 30px;
+}
+
+.skill ion-icon,
+.skill i,
+.skill span {
+  font-size: var(--text1);
+  color: var(--shade3);
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.progress {
+  position: relative;
+  cursor: pointer;
+  z-index: 1 !important;
+}
+
+.progress::after {
+  content: "";
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background: #020024;
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(35%, #090979), color-stop(82%, #00d4ff), to(rgba(0, 212, 255, 0.2357317927)));
+  background: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 82%, rgba(0, 212, 255, 0.2357317927) 100%);
+  /* border-right: 1px solid black; */
+}
+
+.progress::before {
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background-color: transparent;
+  border-right: 3px solid black;
+}
+
+/* html */
+.pro-1::after,
+.pro-1::before {
+  width: 90%;
+}
+
+/* css  */
+.pro-2::after,
+.pro-2::before {
+  width: 65%;
+}
+
+/* js  */
+.pro-3::after,
+.pro-3::before {
+  width: 55%;
+}
+
+/* c  */
+.pro-4::after,
+.pro-4::before {
+  width: 55%;
+}
+
+/* java  */
+.pro-5::after,
+.pro-5::before {
+  width: 40%;
+}
+
+/* edit */
+.pro-6::after,
+.pro-6::before {
+  width: 50%;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,64 @@
+header{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+  .header-bc{
+    width: 100vw;
+    height: 95vh;
+    background: linear-gradient(transparent 80% ,white),url("../images/header-bc.jpeg") fixed center center;
+    background-size: cover;
+    filter: blur(1px);
+  }
+  .header-cloud{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+  }
+  .header-cloud img{
+    position: absolute;
+    bottom: 0;
+    height: 30rem;
+  }
+  .header-strip{
+    width: 5vw;
+    height: 95vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.301) 70% ,transparent);
+    z-index: 10;
+  }
+  .header-strip i{
+    margin: 12px 0;
+    font-size: 4rem;
+    cursor: pointer;
+  }
+  .header-strip:nth-child(1){
+    color: black;
+  }
+  .header-text{
+    width: 100vw;
+    height: 100vh;
+    position:absolute;
+    top: 0;
+  }
+  .header-text h1{
+    font-size: 10rem;
+    letter-spacing: 1rem;
+    color: var(--shade4);
+    font-family: 'Vujahday Script', cursive;
+    overflow: hidden;
+  }
+  .header-text h2{
+    font-size:6rem;
+    text-align: left;
+    letter-spacing: 1rem;
+    color: var(--shade4);
+    font-family: 'Vujahday Script', cursive;
+    overflow: hidden;
+  }
+  #passion{
+    color: var(--shade3);
+  }
