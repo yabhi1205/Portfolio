@@ -8,24 +8,28 @@
 /* md */
 @media (min-width: 992px) and (max-width: 1199px) {
 	html{
-        font-size:50%;
+        font-size:35% !important;
     }
 }
 
 /* sm */
 @media (min-width: 768px) and (max-width: 991px) {
- 	
+    html{
+        font-size: 30% !important;;
+    }
 }
 
 /* xs */
 @media (max-width: 767px) {
-    
+    html{
+        font-size: 22% !important;;
+    }
 }
 
 /* XS Portrait */
 @media (max-width: 479px) {
     html{
-        font-size: 20% !important;;
+        font-size: 15% !important;;
     }
 }
 
