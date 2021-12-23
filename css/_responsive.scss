@@ -17,6 +17,9 @@
     html{
         font-size: 30% !important;;
     }
+    .header-strip{
+        width: 13rem;
+    }
 }
 
 /* xs */
@@ -24,12 +27,18 @@
     html{
         font-size: 22% !important;;
     }
+    .header-strip{
+        width: 16rem;
+    }
 }
 
 /* XS Portrait */
 @media (max-width: 479px) {
     html{
         font-size: 15% !important;;
+    }
+    .header-strip{
+        width: 18rem;
     }
 }
 
