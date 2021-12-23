@@ -48,10 +48,10 @@ nav {
 
     b:nth-child(1) {
       position: absolute;
-      top: -3rem;
       width: 22rem;
       height: 3rem;
       background-color: white;
+      top: -3rem;
     }
     b:nth-child(1)::after {
       content: "";
@@ -91,6 +91,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 11;
 
     i{
         font-size: 3rem;

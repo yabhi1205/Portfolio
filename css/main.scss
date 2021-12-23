@@ -1,13 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap');
 
-* {
+*{
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   font-family: "Roboto", sans-serif;
-  font-size: 62.5%;
   scroll-behavior: smooth;
+}
+html{
+  font-size: 65.5%!important;
 }
 :root {
   --base: #140a15;
@@ -45,6 +47,8 @@ main{
 }
 /* ==============animation====================== */
 @import "animation.scss";
+/* ==============responsive====================== */
+@import "responsive.scss";
 /* 
 header {
   width: 100vw;
