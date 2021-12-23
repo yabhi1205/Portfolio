@@ -1,3 +1,4 @@
+
 header {
   position: relative;
   width: 100vw;
@@ -32,15 +33,69 @@ header {
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(1px);
   border: 1px solid rgba(255, 255, 255, 0.25);
+
+  a{
+    margin: 12px 0;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    font-size: 4rem;
+    cursor: pointer;
+    text-decoration: none;
+    @include center;
+    transition:  .3s all ease;
+    box-shadow: 1px 1px 5px black;
+    
+    &:nth-child(1){
+      color: #4267B2;
+    }
+    &:nth-child(2){
+      color: #0E76A8;
+    }
+    &:nth-child(3){
+      color: #C13584;
+    }
+    &:nth-child(4){
+      color: #171515;
+    }
+    &:nth-child(5){
+      color: #0088CC;
+    }
+    
+    &:hover{
+      font-size: 5rem;
+      color: white;
+      
+      &:nth-child(1){
+        background-color: #4267B2;
+        box-shadow: 1px 1px 20px #4267B2,
+                    -1px -1px 20px #4267B2;
+      }
+      &:nth-child(2){
+        background-color: #0E76A8;
+        box-shadow: 1px 1px 20px #0E76A8,
+        -1px -1px 20px #0E76A8;
+      }
+      &:nth-child(3){
+        background-color: #C13584;
+        box-shadow: 1px 1px 20px #C13584,
+        -1px -1px 20px #C13584  ;
+      }
+      &:nth-child(4){
+        background-color: #171515;
+        box-shadow: 1px 1px 20px #171515,
+        -1px -1px 20px #171515;
+      }
+      &:nth-child(5){
+        background-color: #0088CC;
+        box-shadow: 1px 1px 20px #0088CC,
+        -1px -1px 20px #0088CC;
+      }
+    }
+  }
 }
-.header-strip i {
-  margin: 12px 0;
-  font-size: 4rem;
-  cursor: pointer;
-}
-.header-strip:nth-child(1) {
-  color: black;
-}
+
 .header-text {
   width: 100vw;
   height: 100vh;

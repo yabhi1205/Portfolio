@@ -20,6 +20,12 @@ html{
   --shade4: #4b040d;
   --text1: white;
 }
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .center {
   display: flex;
   justify-content: center;

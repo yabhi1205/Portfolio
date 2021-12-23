@@ -259,15 +259,60 @@ header {
           backdrop-filter: blur(1px);
   border: 1px solid rgba(255, 255, 255, 0.25);
 }
-
-.header-strip i {
+.header-strip a {
   margin: 12px 0;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 1rem;
+  background-color: #fff;
   font-size: 4rem;
   cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.3s all ease;
+  box-shadow: 1px 1px 5px black;
 }
-
-.header-strip:nth-child(1) {
-  color: black;
+.header-strip a:nth-child(1) {
+  color: #4267B2;
+}
+.header-strip a:nth-child(2) {
+  color: #0E76A8;
+}
+.header-strip a:nth-child(3) {
+  color: #C13584;
+}
+.header-strip a:nth-child(4) {
+  color: #171515;
+}
+.header-strip a:nth-child(5) {
+  color: #0088CC;
+}
+.header-strip a:hover {
+  font-size: 5rem;
+  color: white;
+}
+.header-strip a:hover:nth-child(1) {
+  background-color: #4267B2;
+  box-shadow: 1px 1px 20px #4267B2, -1px -1px 20px #4267B2;
+}
+.header-strip a:hover:nth-child(2) {
+  background-color: #0E76A8;
+  box-shadow: 1px 1px 20px #0E76A8, -1px -1px 20px #0E76A8;
+}
+.header-strip a:hover:nth-child(3) {
+  background-color: #C13584;
+  box-shadow: 1px 1px 20px #C13584, -1px -1px 20px #C13584;
+}
+.header-strip a:hover:nth-child(4) {
+  background-color: #171515;
+  box-shadow: 1px 1px 20px #171515, -1px -1px 20px #171515;
+}
+.header-strip a:hover:nth-child(5) {
+  background-color: #0088CC;
+  box-shadow: 1px 1px 20px #0088CC, -1px -1px 20px #0088CC;
 }
 
 .header-text {
