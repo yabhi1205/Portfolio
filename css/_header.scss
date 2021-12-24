@@ -1,3 +1,17 @@
+.globlin{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}
+.globlin img{
+  width: 30rem;
+  position: absolute;
+  top: -40rem;
+  z-index: 100;
+}
+
 
 header {
   position: relative;

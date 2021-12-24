@@ -6,6 +6,7 @@
   overflow-x: hidden;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 html {
@@ -160,6 +161,21 @@ nav a i {
 }
 
 /* ==============header====================== */
+.globlin {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}
+
+.globlin img {
+  width: 30rem;
+  position: absolute;
+  top: -40rem;
+  z-index: 100;
+}
+
 header {
   position: relative;
   width: 100vw;
@@ -293,76 +309,75 @@ main {
 }
 
 /* ==============animation====================== */
-header ion-icon {
-  -webkit-animation: pop 1s linear infinite;
-          animation: pop 1s linear infinite;
+.globlin img {
+  -webkit-animation: UtoD 10s infinite;
+          animation: UtoD 10s infinite;
+  transition: 0.3s all ease;
 }
 
-@-webkit-keyframes pop {
+@-webkit-keyframes UtoD {
   0% {
-    transform: translateY(0px);
+    top: -10%;
+    left: -10;
+    width: 10rem;
   }
-  30% {
-    transform: translateY(-40px);
+  10% {
+    top: 0%;
+    left: 0;
+    width: 15rem;
+  }
+  48% {
+    top: 30%;
+    left: 30%;
+    width: 40rem;
+  }
+  50% {
+    width: 60rem;
+  }
+  52% {
+    top: 30%;
+    left: 30%;
+  }
+  80% {
+    width: 30rem;
   }
   100% {
-    transform: translateY(0px);
+    top: 110%;
+    left: 110%;
+    width: 10rem;
   }
 }
 
-@keyframes pop {
+@keyframes UtoD {
   0% {
-    transform: translateY(0px);
+    top: -10%;
+    left: -10;
+    width: 10rem;
   }
-  30% {
-    transform: translateY(-40px);
+  10% {
+    top: 0%;
+    left: 0;
+    width: 15rem;
+  }
+  48% {
+    top: 30%;
+    left: 30%;
+    width: 40rem;
+  }
+  50% {
+    width: 60rem;
+  }
+  52% {
+    top: 30%;
+    left: 30%;
+  }
+  80% {
+    width: 30rem;
   }
   100% {
-    transform: translateY(0px);
-  }
-}
-header li::after {
-  -webkit-animation: rollright 3s steps(15) infinite;
-          animation: rollright 3s steps(15) infinite;
-}
-
-@-webkit-keyframes rollright {
-  40% {
-    left: 100%;
-  }
-  60% {
-    left: 100%;
-  }
-}
-
-@keyframes rollright {
-  40% {
-    left: 100%;
-  }
-  60% {
-    left: 100%;
-  }
-}
-header li {
-  -webkit-animation: rollup 9s steps(3) infinite;
-          animation: rollup 9s steps(3) infinite;
-}
-
-@-webkit-keyframes rollup {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: -162px;
-  }
-}
-
-@keyframes rollup {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: -162px;
+    top: 110%;
+    left: 110%;
+    width: 10rem;
   }
 }
 .progress::after {
