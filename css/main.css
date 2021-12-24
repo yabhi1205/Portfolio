@@ -248,9 +248,10 @@ header {
 }
 
 .header-strip {
-  width: 10rem;
+  width: 12rem;
   height: 95vh;
   position: absolute;
+  padding-right: 2rem;
   top: 0;
   right: 0;
   z-index: 1;
@@ -566,10 +567,6 @@ header li {
 @media (min-width: 768px) and (max-width: 991px) {
   html {
     font-size: 30% !important;
-  }
-
-  .header-strip {
-    width: 13rem;
   }
 }
 /* xs */
