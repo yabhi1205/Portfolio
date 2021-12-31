@@ -1,5 +1,5 @@
 .globlin img{
-    animation: UtoD 10s  infinite;
+    animation: UtoD 10s  linear;
     transition: .3s all ease;
 }
 @keyframes UtoD {

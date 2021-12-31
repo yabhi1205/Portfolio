@@ -53,7 +53,7 @@
       width: 100vw !important;
       height: 70px !important;
       grid-template-rows: 1fr;
-      grid-template-columns: repeat(6,1fr);
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
       padding: 0 15rem;
       overflow: hidden;
       padding-bottom: 5px;
@@ -107,7 +107,10 @@
     }
   }
   
-  .skills,.s-box{
-      flex-direction: column !important;
+  .s-box{
+      grid-template-columns: 1fr !important;
+  }
+  .skill h3{
+    font-size: 6rem !important;
   }
 }

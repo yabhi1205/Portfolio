@@ -3,7 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow: hidden;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
   box-sizing: border-box;
@@ -55,7 +55,7 @@ nav .nav {
   width: 30rem;
   background-color: #5c97f0;
   display: grid;
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   padding: 15rem 0;
 }
 nav .toggle {
@@ -308,10 +308,142 @@ main {
   font-size: 3rem;
 }
 
+/* skills==================================== */
+.skills {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/coding.png) fixed center center;
+  background-size: cover;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+}
+
+.s-box {
+  min-width: 80%;
+  min-height: 70%;
+  background: #eeaeca;
+  background: radial-gradient(circle, #eeaeca 0%, #94bbe9 100%);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0 0 20px black;
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+}
+
+.s-box::after {
+  content: "SKILLS";
+  color: var(--text1);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  font-size: 10rem;
+  font-weight: bold;
+  filter: opacity(0.2);
+  text-align: right;
+  right: 10%;
+  z-index: 0;
+}
+
+.skill-left,
+.skill-right {
+  height: 100%;
+  margin: 0 12px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.skill {
+  margin-top: 5px;
+  padding: auto;
+  padding-top: 10%;
+  font-size: 3rem;
+}
+
+.skill h3 {
+  margin-bottom: 30px;
+}
+
+.skill ion-icon,
+.skill i,
+.skill span {
+  color: var(--shade3);
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.progress {
+  height: 2rem !important;
+  position: relative;
+  cursor: pointer;
+  z-index: 1 !important;
+  border-radius: 2rem !important;
+}
+
+.progress::after {
+  content: "";
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background: #020024;
+  background: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 82%, rgba(0, 212, 255, 0.2357317927) 100%);
+}
+
+.progress::before {
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background-color: transparent;
+  border-right: 3px solid black;
+}
+
+/* html */
+.pro-1::after,
+.pro-1::before {
+  width: 90%;
+}
+
+/* css  */
+.pro-2::after,
+.pro-2::before {
+  width: 65%;
+}
+
+/* js  */
+.pro-3::after,
+.pro-3::before {
+  width: 55%;
+}
+
+/* c  */
+.pro-4::after,
+.pro-4::before {
+  width: 55%;
+}
+
+/* java  */
+.pro-5::after,
+.pro-5::before {
+  width: 40%;
+}
+
+/* edit */
+.pro-6::after,
+.pro-6::before {
+  width: 50%;
+}
+
 /* ==============animation====================== */
 .globlin img {
-  -webkit-animation: UtoD 10s infinite;
-          animation: UtoD 10s infinite;
+  -webkit-animation: UtoD 10s linear;
+          animation: UtoD 10s linear;
   transition: 0.3s all ease;
 }
 
@@ -555,7 +687,7 @@ main {
     width: 100vw !important;
     height: 70px !important;
     grid-template-rows: 1fr;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     padding: 0 15rem;
     overflow: hidden;
     padding-bottom: 5px;
@@ -604,139 +736,11 @@ main {
     justify-content: center;
   }
 
-  .skills, .s-box {
-    flex-direction: column !important;
+  .s-box {
+    grid-template-columns: 1fr !important;
   }
-}
-/* skills==================================== */
-.skills {
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/coding.png) fixed center center;
-  background-size: cover;
-  -webkit-backdrop-filter: blur(1px);
-          backdrop-filter: blur(1px);
-}
 
-.s-box {
-  min-width: 80%;
-  min-height: 70%;
-  background: #eeaeca;
-  background: radial-gradient(circle, #eeaeca 0%, #94bbe9 100%);
-  border-radius: 10px;
-  flex-direction: row;
-  box-shadow: 0 0 20px black;
-  position: relative;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.5);
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
-}
-
-.s-box::after {
-  content: "SKILLS";
-  color: var(--text1);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  font-size: 10rem;
-  font-weight: bold;
-  filter: opacity(0.2);
-  text-align: right;
-  right: 10%;
-  z-index: 0;
-}
-
-.skill-left,
-.skill-right {
-  width: 48%;
-  height: 100%;
-  margin: 0 12px;
-  flex-direction: column;
-}
-
-.skill {
-  height: 30%;
-  width: 100%;
-  margin-top: 5px;
-  padding: auto;
-  padding-top: 10%;
-}
-
-.skill h3 {
-  margin-bottom: 30px;
-}
-
-.skill ion-icon,
-.skill i,
-.skill span {
-  font-size: var(--text1);
-  color: var(--shade3);
-  margin-right: 5px;
-  font-weight: 700;
-}
-
-.progress {
-  height: 2rem !important;
-  position: relative;
-  cursor: pointer;
-  z-index: 1 !important;
-  border-radius: 2rem !important;
-}
-
-.progress::after {
-  content: "";
-  width: 80%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: -100%;
-  background: #020024;
-  background: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 82%, rgba(0, 212, 255, 0.2357317927) 100%);
-}
-
-.progress::before {
-  content: "";
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: -100%;
-  background-color: transparent;
-  border-right: 3px solid black;
-}
-
-/* html */
-.pro-1::after,
-.pro-1::before {
-  width: 90%;
-}
-
-/* css  */
-.pro-2::after,
-.pro-2::before {
-  width: 65%;
-}
-
-/* js  */
-.pro-3::after,
-.pro-3::before {
-  width: 55%;
-}
-
-/* c  */
-.pro-4::after,
-.pro-4::before {
-  width: 55%;
-}
-
-/* java  */
-.pro-5::after,
-.pro-5::before {
-  width: 40%;
-}
-
-/* edit */
-.pro-6::after,
-.pro-6::before {
-  width: 50%;
+  .skill h3 {
+    font-size: 6rem !important;
+  }
 }/*# sourceMappingURL=main.css.map */

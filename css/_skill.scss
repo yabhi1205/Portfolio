@@ -15,12 +15,13 @@
       rgba(148, 187, 233, 1) 100%
     );
     border-radius: 10px;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     box-shadow: 0 0 20px black;
     position: relative;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
   }
   .s-box::after {
     content: "SKILLS";
@@ -37,17 +38,16 @@
   }
   .skill-left,
   .skill-right {
-    width: 48%;
     height: 100%;
     margin: 0 12px;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
   }
   .skill {
-    height: 30%;
-    width: 100%;
     margin-top: 5px;
     padding: auto;
     padding-top: 10%;
+    font-size: 3rem;
   }
   .skill h3 {
     margin-bottom: 30px;
@@ -55,7 +55,7 @@
   .skill ion-icon,
   .skill i,
   .skill span {
-    font-size: var(--text1);
+    // font-size: 3rem;
     color: var(--shade3);
     margin-right: 5px;
     font-weight: 700;
