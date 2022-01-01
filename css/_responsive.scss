@@ -46,6 +46,7 @@
     width: 100vw !important;
     top: auto;
     bottom: 0rem;
+    z-index: 99;
     
 
 
@@ -112,5 +113,14 @@
   }
   .skill h3{
     font-size: 6rem !important;
+  }
+  .project{
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: 1fr 1fr 1fr !important;
+    margin-bottom: 70px;
+  }
+  div{
+    grid-row: auto !important;
+    grid-column: auto !important;
   }
 }
