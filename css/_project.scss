@@ -47,6 +47,8 @@
         overflow: hidden;
         border: 1px solid black;
         border-bottom: none;
+        box-shadow: 1px 1px 10px rgba(121, 99, 99, 0.445),
+                    -1px -1px 10px rgba(121, 99, 99, 0.445);
         
         a{
             text-decoration: none;

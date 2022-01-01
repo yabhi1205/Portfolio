@@ -47,7 +47,7 @@ nav {
   position: fixed;
   top: 0;
   background-color: #fff;
-  z-index: 10;
+  z-index: 999;
   transition: 0.4s all ease;
 }
 nav .nav {
@@ -490,6 +490,7 @@ main {
   overflow: hidden;
   border: 1px solid black;
   border-bottom: none;
+  box-shadow: 1px 1px 10px rgba(121, 99, 99, 0.445), -1px -1px 10px rgba(121, 99, 99, 0.445);
 }
 .project div a {
   text-decoration: none;
@@ -534,8 +535,8 @@ main {
 
 /* ==============animation====================== */
 .globlin img {
-  -webkit-animation: UtoD 10s linear;
-          animation: UtoD 10s linear;
+  -webkit-animation: UtoD 10s infinite;
+          animation: UtoD 10s infinite;
   transition: 0.3s all ease;
 }
 
