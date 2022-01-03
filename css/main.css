@@ -46,7 +46,7 @@ nav {
   width: 30rem;
   position: fixed;
   top: 0;
-  background-color: #fff;
+  background-color: #000;
   z-index: 999;
   transition: 0.4s all ease;
 }
@@ -83,7 +83,7 @@ nav .link {
   border-radius: 4rem 0 0 4rem;
 }
 nav .active {
-  background-color: white;
+  background-color: black;
   position: relative;
   overflow: visible;
 }
@@ -91,7 +91,7 @@ nav .active b:nth-child(1) {
   position: absolute;
   width: 22rem;
   height: 3rem;
-  background-color: white;
+  background-color: black;
   top: -3rem;
 }
 nav .active b:nth-child(1)::after {
@@ -107,7 +107,7 @@ nav .active b:nth-child(3) {
   position: absolute;
   width: 22rem;
   height: 3rem;
-  background-color: white;
+  background-color: black;
   bottom: -3rem;
 }
 nav .active b:nth-child(3):after {
@@ -120,7 +120,10 @@ nav .active b:nth-child(3):after {
   background-color: #5c97f0;
 }
 nav .active a {
-  color: black;
+  color: white;
+}
+nav .active a i {
+  color: white;
 }
 nav a {
   font-size: 2rem;
@@ -185,7 +188,7 @@ header {
 .header-bc {
   width: 100vw;
   height: 95vh;
-  background: linear-gradient(transparent 80%, white), url("../images/header-bc.jpeg") fixed center center;
+  background: linear-gradient(transparent 80%, black), url("../images/header-bc.jpeg") fixed center center;
   background-size: cover;
   filter: blur(1px);
 }
@@ -452,6 +455,7 @@ main {
   height: 100vh;
   position: absolute;
   top: 0;
+  background-color: black;
   filter: blur(4px);
 }
 .back::after {
@@ -479,7 +483,7 @@ main {
   width: 80vw;
   height: 90vh;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 5rem;
   z-index: 10;
@@ -501,36 +505,51 @@ main {
   transition: 0.5s all ease;
 }
 .project div a h3 {
-  padding-top: 0.2rem;
+  padding-top: 0.5rem;
   text-align: center;
   color: white;
 }
 .project div a:hover img {
-  height: 90%;
+  height: 85%;
 }
-.project .gym {
-  grid-column: 1;
+
+/* project==================================== */
+#photo {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/photo-background.jpeg) fixed center;
+  background-size: cover;
+}
+#photo .photo {
+  width: 85vw;
+  height: 80vh;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 3rem;
+  grid-row-gap: 5vh;
+}
+#photo .photo div {
+  border-radius: 2rem;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+  transition: 0.3s all ease;
+}
+#photo .photo div:hover {
+  box-shadow: 0px 0px 20px white;
+  transform: translateY(-10px);
+}
+#photo .photo div img {
+  width: 100%;
+  height: 100%;
+}
+#photo .photo .pic-1 {
   grid-row: 1/3;
-}
-.project .sos {
-  grid-column: 2/5;
-  grid-row: 1;
-}
-.project .game {
-  grid-column: 2;
-  grid-row: 2;
-}
-.project .typing {
-  grid-column: 3;
-  grid-row: 2;
-}
-.project .first {
-  grid-column: 4;
-  grid-row: 2/4;
-}
-.project .note {
   grid-column: 1/4;
-  grid-row: 3;
+}
+#photo .photo .pic-2 {
+  grid-row: 2/4;
+  grid-column: 4/7;
 }
 
 /* ==============animation====================== */
@@ -839,13 +858,18 @@ main {
   }
 
   .project {
-    grid-template-columns: 1fr 1fr !important;
-    grid-template-rows: 1fr 1fr 1fr !important;
+    width: 80vw;
+    height: 75vh;
     margin-bottom: 70px;
   }
 
-  div {
+  .photo {
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  .photo div {
     grid-row: auto !important;
     grid-column: auto !important;
+    grid-gap: 5rem;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -4,7 +4,7 @@ nav {
   width: 30rem;
   position: fixed;
   top: 0;
-  background-color: #fff;
+  background-color: #000;
   z-index: 999;
   transition: .4s all ease;
 
@@ -43,7 +43,7 @@ nav {
   }
 
   .active {
-    background-color: white;
+    background-color: black;
     position: relative;
     overflow: visible;
 
@@ -51,7 +51,7 @@ nav {
       position: absolute;
       width: 22rem;
       height: 3rem;
-      background-color: white;
+      background-color: black;
       top: -3rem;
     }
     b:nth-child(1)::after {
@@ -67,7 +67,7 @@ nav {
       position: absolute;
       width: 22rem;
       height: 3rem;
-      background-color: white;
+      background-color: black;
       bottom: -3rem;
     }
     b:nth-child(3):after {
@@ -80,7 +80,11 @@ nav {
         background-color: rgb(92, 151, 240);
       }
     a{
-        color: black;
+        color: white;
+
+        i{
+          color: white;
+        }
     }
   }
 

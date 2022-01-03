@@ -115,12 +115,18 @@
     font-size: 6rem !important;
   }
   .project{
-    grid-template-columns: 1fr 1fr !important;
-    grid-template-rows: 1fr 1fr 1fr !important;
+    width: 80vw;
+    height: 75vh;
     margin-bottom: 70px;
   }
-  div{
-    grid-row: auto !important;
-    grid-column: auto !important;
+  .photo{
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    div{
+      grid-row: auto !important;
+      grid-column: auto !important;
+      grid-gap: 5rem;
+    }
   }
+  
 }
