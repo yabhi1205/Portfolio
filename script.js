@@ -14,15 +14,6 @@ setInterval(()=>{
 },3000)
 //=================nav ==============
 
-let link = document.querySelectorAll(".link");
-link.forEach(element => {
-    element.addEventListener('click',()=>{
-        link.forEach((e)=>{
-            e.classList="link";
-        });
-        element.classList="link active";
-    })
-});
 let open=document.getElementById("open");
 let close=document.getElementById("close");
 
@@ -92,19 +83,30 @@ function showword() {
 
 //=================sections=================
 let section = document.querySelectorAll("section");
-link.forEach(element => {
-    element.addEventListener('click',()=>{
-             
+window.addEventListener("scroll",()=>{
+    section.forEach((e)=>{
+        e.classList="center";
+    });
         section.forEach((e)=>{
-            e.classList="center";
-            console.log(e.getBoundingClientRect().top);
-        });
-        setInterval(()=>{
-            section.forEach((e)=>{
-                let temp =e.getBoundingClientRect().top;
-                if(temp==0){
+            let temp =e.getBoundingClientRect().top;
+            if(temp>=0 && temp<=200){
                 e.classList="center sactive";}
-            },100);;
-        })
-    })
+        });
+});
+    
+//==============scroll=====================
+let bottomPage=window.innerHeight/6*3;
+let link = document.querySelectorAll(".link");
+window.addEventListener("scroll",()=>{
+    let i=0;
+   for(i=0;i<6;i++){
+       let len=section[i].getBoundingClientRect().top;
+       if(len>=0 && len<=bottomPage){
+        link.forEach((e)=>{
+            e.classList="link";
+        });
+        link[i].classList="link active"
+       }
+
+   }
 });
