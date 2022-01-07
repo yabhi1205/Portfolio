@@ -101,3 +101,29 @@
         transform: translateX(150%);
     }
 }
+
+.sactive{
+    .anima{
+        animation: flip 1.5s   ;
+    }
+    @keyframes flip {
+        0%{
+            transform: rotatex(0deg);
+        }
+        20%{
+            transform: rotatex(-20deg);
+        }
+        40%{
+            transform: rotatex(20deg);
+        }
+        60%{
+            transform: rotatex(-10deg);
+        }
+        80%{
+            transform: rotatex(10deg);
+        }
+        100%{
+            transform: rotatex(0deg);
+        }
+    }
+}

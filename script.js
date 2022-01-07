@@ -89,3 +89,22 @@ function showword() {
     }
     edit.innerText=count6+'%';
 }
+
+//=================sections=================
+let section = document.querySelectorAll("section");
+link.forEach(element => {
+    element.addEventListener('click',()=>{
+             
+        section.forEach((e)=>{
+            e.classList="center";
+            console.log(e.getBoundingClientRect().top);
+        });
+        setInterval(()=>{
+            section.forEach((e)=>{
+                let temp =e.getBoundingClientRect().top;
+                if(temp==0){
+                e.classList="center sactive";}
+            },100);;
+        })
+    })
+});

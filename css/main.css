@@ -187,7 +187,7 @@ header {
 
 .header-bc {
   width: 100vw;
-  height: 95vh;
+  height: 100vh;
   background: linear-gradient(transparent 80%, black), url("../images/header-bc.jpeg") fixed center center;
   background-size: cover;
   filter: blur(1px);
@@ -209,15 +209,13 @@ header {
 .header-strip {
   width: 12rem;
   height: 95vh;
-  position: absolute;
+  position: fixed;
   padding-right: 2rem;
   top: 0;
   right: 0;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.5);
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 .header-strip a {
   margin: 12px 0;
@@ -517,7 +515,7 @@ main {
 #photo {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/photo-background.jpeg) fixed center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/photo-background.jpeg") center;
   background-size: cover;
 }
 #photo .photo {
@@ -749,6 +747,51 @@ main {
     transform: translateX(150%);
   }
 }
+.sactive .anima {
+  -webkit-animation: flip 1.5s;
+          animation: flip 1.5s;
+}
+@-webkit-keyframes flip {
+  0% {
+    transform: rotatex(0deg);
+  }
+  20% {
+    transform: rotatex(-20deg);
+  }
+  40% {
+    transform: rotatex(20deg);
+  }
+  60% {
+    transform: rotatex(-10deg);
+  }
+  80% {
+    transform: rotatex(10deg);
+  }
+  100% {
+    transform: rotatex(0deg);
+  }
+}
+@keyframes flip {
+  0% {
+    transform: rotatex(0deg);
+  }
+  20% {
+    transform: rotatex(-20deg);
+  }
+  40% {
+    transform: rotatex(20deg);
+  }
+  60% {
+    transform: rotatex(-10deg);
+  }
+  80% {
+    transform: rotatex(10deg);
+  }
+  100% {
+    transform: rotatex(0deg);
+  }
+}
+
 /* ==============responsive====================== */
 /* lg */
 @media (min-width: 1200px) {

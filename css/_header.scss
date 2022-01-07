@@ -20,7 +20,7 @@ header {
 }
 .header-bc {
   width: 100vw;
-  height: 95vh;
+  height: 100vh;
   background: linear-gradient(transparent 80%, black),
     url("../images/header-bc.jpeg") fixed center center;
   background-size: cover;
@@ -40,14 +40,14 @@ header {
 .header-strip {
   width: 12rem;
   height: 95vh;
-  position: absolute;
+  position: fixed;
   padding-right: 2rem;
   top: 0;
   right: 0;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.5);
+  // background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(1px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  // border: 1px solid rgba(255, 255, 255, 0.25);
 
   a{
     margin: 12px 0;
