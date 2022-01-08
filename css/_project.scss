@@ -2,36 +2,38 @@
     width: 100vw;
     height: 100vh;
     position: relative;
+    background: url("../images/pro-back.jpg") fixed center;
+    background-size: cover;
 }
-.back{
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    background-color: black;
-    filter: blur(4px);
+// .back{
+//     width: 100vw;
+//     height: 100vh;
+//     position: absolute;
+//     top: 0;
+//     background-color: black;
+//     filter: blur(4px);
     
-    &::after{
-        content: '';
-        width: 50rem;
-        height: 50rem;
-        background-color: violet;
-        border-radius: 50%;
-        position: absolute;
-        bottom: 20rem;
-        left: 20rem;
-    }
-    &::before{
-        content: '';
-        width: 40rem;
-        height: 40rem;
-        background-color: aqua;
-        border-radius: 50%;
-        position: absolute;
-        top: 20rem;
-        right: 20rem;
-    }
-}
+//     &::after{
+//         content: '';
+//         width: 50rem;
+//         height: 50rem;
+//         background-color: violet;
+//         border-radius: 50%;
+//         position: absolute;
+//         bottom: 20rem;
+//         left: 20rem;
+//     }
+//     &::before{
+//         content: '';
+//         width: 40rem;
+//         height: 40rem;
+//         background-color: aqua;
+//         border-radius: 50%;
+//         position: absolute;
+//         top: 20rem;
+//         right: 20rem;
+//     }
+// }
 
 .project{
     width: 80vw;
@@ -41,15 +43,21 @@
     grid-template-rows: 1fr 1fr 1fr ;
     grid-gap: 5rem;
     z-index: 10;
+    margin: 5rem;
     
     div{
         background-color: rgba(0, 0, 0, 0.24);
         border-radius: 4rem;
-        overflow: hidden;
+        overflow-y: hidden;
         border: 1px solid black;
         border-bottom: none;
         box-shadow: 1px 1px 10px rgba(121, 99, 99, 0.445),
                     -1px -1px 10px rgba(121, 99, 99, 0.445);
+        transition: .3s all ease;
+        margin: 1rem;
+        &:hover{
+            transform: scale(1.03);
+            }
         
         a{
             text-decoration: none;
@@ -64,6 +72,7 @@
                 text-align: center;
                 color: white;
             }
+            
         }
         a:hover img{
                height: 85%; 

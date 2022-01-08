@@ -3,15 +3,14 @@
     height: 100vh;
     font-size: 4rem;
     position: relative;
-    background: #141E30;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),url("../images/contact-back.jpg") fixed center no-repeat;
+    background-size: cover;
     color: white;
 
     h2{
         text-align: center;
         font-size: 6rem;
-        color: red;
+        color: orange;
         
     }
 
@@ -26,9 +25,28 @@
         input,textarea{
             margin: 2rem;
             padding: 1rem;
+            padding-left: 20px;
             border: none;
             outline: none;
             border-radius: 2rem;
+            box-shadow: inset 1px 1px 10px black,
+                        inset -1px -1px 10px black;
+            transition: 1s all ease;
+
+            &:active,
+            &:visited{
+                box-shadow: 2px 2px 10px white,
+                        inset 1px 1px 10px black,
+                        inset -1px -1px 10px black;
+            }
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type="number"] {
+            -moz-appearance: textfield;
         }
     }
     .formBox{

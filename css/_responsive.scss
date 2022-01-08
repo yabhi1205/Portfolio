@@ -151,9 +151,9 @@
   }
 
   #about{
-    background: linear-gradient(rgba(255, 255, 255, 0.2)rgba(255, 255, 255, 0.2)),url("../images/background.jpeg");
     .aboutback{
-      display: none;
+      background-position: left;
+      // display: none;
     }
 
     .abouttext{
