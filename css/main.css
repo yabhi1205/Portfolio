@@ -912,7 +912,7 @@ main {
   transition: transform 0.6s ease !important;
 }
 
-/* ==============scrollanimation====================== */
+/* 
 /* ==============responsive====================== */
 /* lg */
 @media (min-width: 1200px) {
