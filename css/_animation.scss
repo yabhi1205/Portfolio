@@ -1,39 +1,3 @@
-.globlin img{
-    animation: UtoD  10s infinite;
-    transition: .3s all ease;
-}
-@keyframes UtoD {
-    0%{
-        top: -10%;
-        left: -10;
-        width: 10rem;
-    }
-    10%{
-        top: 0%;
-        left: 0;
-        width: 15rem;
-    }
-    48%{
-        top: 30%;
-        left: 30%;
-        width: 40rem;
-    }
-    50%{
-        width: 60rem;
-    }
-    52%{
-        top: 30%;
-        left: 30%;
-    }
-    80%{
-        width: 30rem;
-    }
-    100%{
-        top: 110%;
-        left: 110%;
-        width: 10rem;
-    }
-}
 .progress::after{
     animation: cameright 10s  infinite;
 }
@@ -72,58 +36,89 @@
         left: -100%;
     }
 }
-
-.header-cloud:nth-child(2) img{
-    animation: move-right 8s linear infinite;
-    transform: translateX(-100%);
-}
-.header-cloud:nth-child(3) img{
-    animation: move-right 8s linear 3s infinite;
-    transform: translateX(-100%);
-}
-.header-cloud:nth-child(4) img{
-    animation: move-right 8s linear 6s infinite;
-    transform: translateX(-100%);
-}
-@keyframes move-right {
-    0%{
-        transform: translateX(-100%);
+.nactive{
+    .left{
+        transform: translatex(-100vw);
     }
-    100%{
-        transform: translateX(150%);
+    .right{
+        transform: translatex(100vw);
+    }
+    .shrink{
+        transform: scale(0);
     }
 }
-@keyframes move-right-2 {
-    0%{
-        transform: translateX(0%);
-    }
-    100%{
-        transform: translateX(150%);
-    }
-}
-
 .sactive{
     .anima{
-        animation: flip 1.5s   ;
+        animation: flip 2s ;
+        animation-delay: .6s;
     }
     @keyframes flip {
         0%{
-            transform: rotatex(0deg);
+            transform: rotatey(0deg);
         }
         20%{
-            transform: rotatex(-20deg);
+            transform: rotatey(-30deg);
         }
         40%{
-            transform: rotatex(20deg);
+            transform: rotatey(30deg);
         }
         60%{
-            transform: rotatex(-10deg);
+            transform: rotatey(-15deg);
         }
         80%{
-            transform: rotatex(10deg);
+            transform: rotatey(15deg);
         }
         100%{
-            transform: rotatex(0deg);
+            transform: rotatey(0deg);
         }
+    }
+    .start{
+        animation: forwardbar 2s ;
+        
+    }
+    @keyframes forwardbar {
+        0%{
+            background:conic-gradient(white 25%,white 50%,white 75%,white 100% );
+        }
+        12%{
+            background:conic-gradient(orange 25%,white 50%,white 75%,white 100% );
+        }
+        24%{
+            background:conic-gradient(orange 25%,orange 50%,white 75%,white 100% );
+        }
+        36%{
+            background:conic-gradient(orange 25%,orange 50%,orange 75%,white 100% );
+        }
+        48%{
+            background:conic-gradient(orange 25%,orange 50%,orange 75%,orange 100% );
+        } 
+        60%{
+            background:conic-gradient(orange 25%,orange 50%,orange 75%,orange 100% );
+        }
+        72%{
+            background:conic-gradient(orange 25%,orange 50%,orange 75%,white 100% );
+        }
+        84%{
+            background:conic-gradient(orange 25%,orange 50%,white 75%,white 100% );
+        }
+        96%{
+            background:conic-gradient(orange 25%,white 50%,white 75%,white 100% );
+        }
+        100%{
+            background:conic-gradient(white 25%,white 50%,white 75%,white 100% );
+        }
+    }
+    
+    .left{
+        transform: translatex(0px);
+        transition: transform .6s ease !important;
+    }
+    .right{
+        transform: translatex(0px);
+        transition: transform .6s ease !important;
+    }
+    .shrink{
+        transform: scale(1);
+        transition: transform .6s ease !important;
     }
 }

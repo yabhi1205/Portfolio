@@ -1,7 +1,11 @@
 // =================pre loader======================== 
 var loader = document.querySelector(".preloader");
+var linksside = document.querySelector(".header-strip");
+var headertext = document.querySelector(".header-text");
 window.addEventListener("load",()=>{
     loader.style.display="none";
+    linksside.style.transform="scale(1)"
+    headertext.style.transform="scale(1)"
 })
 //=========================
 let passion = document.getElementById("passion");
@@ -82,32 +86,30 @@ function showword() {
 }
 
 //=================sections=================
+let bottomPage=window.innerHeight/6*2;
 let section = document.querySelectorAll("section");
 window.addEventListener("scroll",()=>{
-    section.forEach((e)=>{
-        e.classList="center";
-    });
         section.forEach((e)=>{
             let temp =e.getBoundingClientRect().top;
-            if(temp>=0 && temp<=200){
+            if(temp<=bottomPage*1.5){
                 e.classList="center sactive";}
+            else{
+                e.classList="center nactive";
+            }
         });
 });
     
 //==============scroll=====================
-let bottomPage=window.innerHeight/6*3;
 let link = document.querySelectorAll(".link");
 window.addEventListener("scroll",()=>{
-    let i=0;
-   for(i=0;i<6;i++){
+   for(let i=0;i<6;i++){
        let len=section[i].getBoundingClientRect().top;
-       if(len>=0 && len<=bottomPage){
-        link.forEach((e)=>{
-            e.classList="link";
-        });
-        link[i].classList="link active"
+       if(len>=-10 && len<=bottomPage){
+            link.forEach((e)=>{
+                e.classList="link";
+            });
+            link[i].classList="link active"
        }
-
    }
 });
 
@@ -123,13 +125,13 @@ prev.addEventListener('click',()=>{
         next.style.color="white";
         progg.innerText=countProg+"%";
         if(countProg==25){
-            progg.style.background="conic-gradient(aqua 25%,white 50%,white 75%,white 100% )";
+            progg.style.background="conic-gradient(orange 25%,white 50%,white 75%,white 100% )";
         }
         if(countProg==50){
-            progg.style.background="conic-gradient(aqua 25%,aqua 50%,white 75%,white 100% )";
+            progg.style.background="conic-gradient(orange 25%,orange 50%,white 75%,white 100% )";
         }
         if(countProg==75){
-            progg.style.background="conic-gradient(aqua 25%,aqua 50%,aqua 75%,white 100% )";
+            progg.style.background="conic-gradient(orange 25%,orange 50%,orange 75%,white 100% )";
         }
         if(countProg==0){
             prev.style.color="rgba(245, 245, 245, 0.3)";
@@ -148,18 +150,18 @@ next.addEventListener('click',()=>{
         prev.style.color="white";
         progg.innerText=countProg+"%";
         if(countProg==25){
-            progg.style.background="conic-gradient(aqua 25%,white 50%,white 75%,white 100% )";
+            progg.style.background="conic-gradient(orange 25%,white 50%,white 75%,white 100% )";
         }
         if(countProg==50){
-            progg.style.background="conic-gradient(aqua 25%,aqua 50%,white 75%,white 100% )";
+            progg.style.background="conic-gradient(orange 25%,orange 50%,white 75%,white 100% )";
         }
         if(countProg==75){
-            progg.style.background="conic-gradient(aqua 25%,aqua 50%,aqua 75%,white 100% )";
+            progg.style.background="conic-gradient(orange 25%,orange 50%,orange 75%,white 100% )";
         }
         if(countProg==100){
             next.style.color="rgba(245, 245, 245, 0.3)";
             next.style.cursor="not-allowed";
-            progg.style.background="conic-gradient(aqua 25%,aqua 50%,aqua 75%,aqua 100% )";
+            progg.style.background="conic-gradient(orange 25%,orange 50%,orange 75%,orange 100% )";
             
         }
     }
@@ -224,6 +226,9 @@ document.getElementById("submit").addEventListener("click",()=>{
         }
     );
 })
+
+
+
 
 
     
