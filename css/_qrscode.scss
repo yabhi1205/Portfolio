@@ -1,0 +1,22 @@
+.qr-code-w{
+    width: 100vw;
+    height: 100vh;
+    flex-direction: row;
+    background-color: rgb(1,169,132);
+    overflow: hidden;
+
+    & img{
+        height: 100%;
+    }
+}
+.qr-code-t{
+    width: 100vw;
+    height: 100vh;
+    flex-direction: row;
+    background-color: rgb(0,0,0);
+    overflow: hidden;
+
+    & img{
+        height: 100%;
+    }
+}

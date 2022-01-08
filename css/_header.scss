@@ -77,6 +77,9 @@ header {
     &:nth-child(5){
       color: #0088CC;
     }
+    &:nth-child(6){
+      color: rgb(1,169,132);
+    }
     
     &:hover{
       transform: scale(1.1);
@@ -107,6 +110,11 @@ header {
         background-color: #0088CC;
         box-shadow: 1px 1px 20px #0088CC,
         -1px -1px 20px #0088CC;
+      }
+      &:nth-child(6){
+        background-color: rgb(1,169,132);
+        box-shadow: 1px 1px 20px rgb(1,169,132),
+        -1px -1px 20px rgb(1,169,132);
       }
     }
   }

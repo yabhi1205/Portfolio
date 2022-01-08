@@ -254,6 +254,9 @@ header {
 .header-strip a:nth-child(5) {
   color: #0088CC;
 }
+.header-strip a:nth-child(6) {
+  color: #01a984;
+}
 .header-strip a:hover {
   transform: scale(1.1);
   font-size: 5rem;
@@ -278,6 +281,10 @@ header {
 .header-strip a:hover:nth-child(5) {
   background-color: #0088CC;
   box-shadow: 1px 1px 20px #0088CC, -1px -1px 20px #0088CC;
+}
+.header-strip a:hover:nth-child(6) {
+  background-color: #01a984;
+  box-shadow: 1px 1px 20px #01a984, -1px -1px 20px #01a984;
 }
 
 .header-text {
@@ -682,6 +689,29 @@ main {
   border-radius: 50%;
   box-shadow: inset 1px 1px 10px black;
   z-index: -1;
+}
+
+/* qrcode==================================== */
+.qr-code-w {
+  width: 100vw;
+  height: 100vh;
+  flex-direction: row;
+  background-color: #01a984;
+  overflow: hidden;
+}
+.qr-code-w img {
+  height: 100%;
+}
+
+.qr-code-t {
+  width: 100vw;
+  height: 100vh;
+  flex-direction: row;
+  background-color: black;
+  overflow: hidden;
+}
+.qr-code-t img {
+  height: 100%;
 }
 
 /* ==============animation====================== */
