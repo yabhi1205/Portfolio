@@ -34,7 +34,7 @@
     .formBox{
         position: absolute;
         top: 10%;
-        left: -100vw;
+        left: -150vw;
         margin: 0 auto;
         transition: .3s all ease;
     }
@@ -100,9 +100,9 @@
         &::before{
             content: "";
             position: absolute;
-            top: 2.5rem;
-            width: 20rem;
-            height: 20rem;
+            top: 10%;
+            width: 80%;
+            height: 80%;
             background-color: white;
             border-radius: 50%;
             box-shadow: inset 1px 1px 10px black;

@@ -128,5 +128,25 @@
       grid-gap: 5rem;
     }
   }
-  
+  #contact{
+    font-size: 5rem !important;
+    h2{
+      font-size: 10rem;
+    }
+    h3{
+      font-size: 8rem;
+      margin-top: 3rem !important;
+    }
+    .formBox{
+      top: 30%;
+    }
+  }
+  .Cdown{
+    font-size: 10rem !important;
+    margin-top: 100rem !important;
+  }
+  .Cprogress{
+    width: 45rem !important;
+    height: 45rem !important;
+  }
 }

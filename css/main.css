@@ -722,7 +722,7 @@ main {
 #contact .formBox {
   position: absolute;
   top: 10%;
-  left: -100vw;
+  left: -150vw;
   margin: 0 auto;
   -webkit-transition: .3s all ease;
   transition: .3s all ease;
@@ -795,9 +795,9 @@ main {
 #contact .Cprogress::before {
   content: "";
   position: absolute;
-  top: 2.5rem;
-  width: 20rem;
-  height: 20rem;
+  top: 10%;
+  width: 80%;
+  height: 80%;
   background-color: white;
   border-radius: 50%;
   -webkit-box-shadow: inset 1px 1px 10px black;
@@ -1204,6 +1204,27 @@ main {
     grid-row: auto !important;
     grid-column: auto !important;
     grid-gap: 5rem;
+  }
+  #contact {
+    font-size: 5rem !important;
+  }
+  #contact h2 {
+    font-size: 10rem;
+  }
+  #contact h3 {
+    font-size: 8rem;
+    margin-top: 3rem !important;
+  }
+  #contact .formBox {
+    top: 30%;
+  }
+  .Cdown {
+    font-size: 10rem !important;
+    margin-top: 100rem !important;
+  }
+  .Cprogress {
+    width: 45rem !important;
+    height: 45rem !important;
   }
 }
 /*# sourceMappingURL=main.css.map */
