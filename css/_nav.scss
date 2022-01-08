@@ -40,6 +40,14 @@ nav {
     margin-left: 4rem;
     padding-left: 4rem;
     border-radius: 4rem 0 0 4rem;
+    
+    a{
+      transition: .3s all ease;
+    }
+
+    &:hover a{
+      transform: scale(1.4);
+    }
   }
 
   .active {

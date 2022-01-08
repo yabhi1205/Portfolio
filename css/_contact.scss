@@ -1,0 +1,112 @@
+#contact{
+    width: 100vw;
+    height: 100vh;
+    font-size: 4rem;
+    position: relative;
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+
+    h2{
+        text-align: center;
+        font-size: 6rem;
+        color: red;
+        
+    }
+
+    h3{
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .Cform{
+        flex-direction: row;
+        margin-top: 4rem;
+        input,textarea{
+            margin: 2rem;
+            padding: 1rem;
+            border: none;
+            outline: none;
+            border-radius: 2rem;
+        }
+    }
+    .formBox{
+        position: absolute;
+        top: 10%;
+        left: -100vw;
+        margin: 0 auto;
+        transition: .3s all ease;
+    }
+    .formBox:nth-child(1){
+        
+        left: 0px;
+        right:0;
+        
+        
+    }
+
+
+    .Cdown{
+        flex-direction: row;
+        font-size: 6rem;
+        margin-top: 30rem;
+    }
+
+    .Cprevious,
+    .Cnext{
+        height: 9rem;
+        cursor: pointer;
+        position: relative;
+        padding-top: 3rem;
+        overflow: visible;
+        color: rgba(245, 245, 245, 0.3);
+        margin: 0 6rem;
+        transition: .3s all ease;
+        
+        &:hover{
+            transform: scale(1.1);
+        }
+
+        &:hover::before{
+            content: "Previous";
+            color: rgb(20, 138, 138);
+            font-size: 3rem;
+            position: absolute;
+            top: 0rem;
+            z-index: 100;
+        }
+    }
+
+    .Cnext{
+        color: white;
+
+        &:hover::before{
+            content: "Next";}
+    }
+
+    .Cprogress{
+        width: 25rem;
+        height: 25rem;
+        background:conic-gradient(white 25%,white 50%,white 75%,white 100% );
+        border-radius: 50%;
+        position: relative;
+        box-shadow: inset 1px 1px 5px black,
+                    0px 0px 10px white;
+        color: black;
+        margin: 2rem;
+        z-index: 10;
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 2.5rem;
+            width: 20rem;
+            height: 20rem;
+            background-color: white;
+            border-radius: 50%;
+            box-shadow: inset 1px 1px 10px black;
+            z-index: -1;
+        }
+    }
+}

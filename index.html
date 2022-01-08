@@ -16,9 +16,9 @@
 
   <body>
     <!-- globlin--------------------------------------- -->
-    <div class="globlin">
+    <!-- <div class="globlin">
       <img src="images/globlin.png" alt="">
-    </div>
+    </div> -->
     <!-- preloader--------------------------------------- -->
     <div class="preloader"></div>
     <!-- nav--------------------------------------------- -->
@@ -55,7 +55,7 @@
         </div>
         <div class="link">
           <b></b>
-          <a href=""><i class="fas fa-address-book"></i><h2>CONTACT</h2></a>
+          <a href="#contact"><i class="fas fa-address-book"></i><h2>CONTACT</h2></a>
           <b></b>
         </div>
       </div>
@@ -205,13 +205,83 @@
 
       </section>
       <!-- contact ----------------------------------------------- -->
-      <section>
-        
+      <section id="contact" class="center">
+        <form action="javascript:sendmail()" method="post">
+          <div class="formBox" id="hi">
+            <div class="CText">
+              <h2>Hi! What is your Name</h2>
+            </div>
+            <div class="Cform center">
+              <div class="LCform">
+                <h3>First Name</h3>
+                <input type="text" id="Fname" required placeholder=" First Name">
+              </div>
+              <div class="RCform">
+                <h3>Last Name</h3>
+                <input type="text" id="Lname"  placeholder="Last Name">
+              </div>
+            </div>
+          </div>
+          <div class="formBox">
+            <div class="CText">
+              <h2>Hey! Let me know you</h2>
+            </div>
+            <div class="Cform center">
+              <div class="LCform">
+                <h3>Phone no.</h3>
+                <input type="number" id="num" required placeholder=" Phone no.">
+              </div>
+            </div>
+          </div>
+          <div class="formBox">
+            <div class="CText">
+              <h2>Hey! Let me know you</h2>
+            </div>
+            <div class="Cform center">
+              <div class="RCform">
+                <h3>Email Id.</h3>
+                <input type="email" id="mail" required placeholder="Email Id.">
+              </div>
+            </div>
+          </div>
+          <div class="formBox">
+            <div class="CText">
+              <h2>Type without any Hesitation</h2>
+            </div>
+            <div class="Cform center">
+                <textarea name="" id="detail" cols="50" rows="3"placeholder="Describe your problem........" required></textarea>
+              
+            </div>
+          </div>
+          <div class="formBox">
+            <div class="CText">
+              <h2>Let me know what you want to say!</h2>
+              
+            </div>
+            <div class="Cform center">
+              <input type="submit" id="submit" value="Punch ME">
+            </div>
+          </div>
+        </form>
+        <div class="Cdown center">
+          <div class="Cprevious">
+            <i class="far fa-hand-point-left"></i>
+          </div>
+          <div class="Cprogress center">
+            0%
+          </div>
+          <div class="Cnext ">
+            <i class="far fa-hand-point-right"></i>
+          </div>
+        </div>
       </section>
     </main>
       <!-- icon jsvascript -->
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+      <script src="https://smtpjs.com/v3/smtp.js"> 
+       </script>
        <!-- main javascript -->
       <script src="script.js"></script>
   </body>
