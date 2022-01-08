@@ -149,4 +149,29 @@
     width: 45rem !important;
     height: 45rem !important;
   }
+
+  #about{
+    background: linear-gradient(rgba(255, 255, 255, 0.2)rgba(255, 255, 255, 0.2)),url("../images/background.jpeg");
+    .aboutback{
+      display: none;
+    }
+
+    .abouttext{
+      left: 0%;
+      right: 0;
+      margin: 0 auto;
+      width: 80vw;
+
+      h1{
+        font-size: 8rem;
+        margin-bottom: 3rem;
+      }
+      p{
+        font-size: 6rem;
+      }
+      h2{
+        font-size: 4rem;
+      }
+    }
+  }
 }
