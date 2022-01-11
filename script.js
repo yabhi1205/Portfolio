@@ -1,11 +1,11 @@
 // =================pre loader======================== 
 var loader = document.querySelector(".preloader");
 var linksside = document.querySelector(".header-strip");
-var headertext = document.querySelector(".header-text");
+var shrink = document.querySelector(".shrink");
 window.addEventListener("load",()=>{
     loader.style.display="none";
     linksside.style.transform="scale(1)"
-    headertext.style.transform="scale(1)"
+    shrink.style.transform="scale(1)"
 })
 //=========================
 let passion = document.getElementById("passion");
@@ -45,7 +45,7 @@ let section = document.querySelectorAll("section");
 window.addEventListener("scroll",()=>{
         section.forEach((e)=>{
             let temp =e.getBoundingClientRect().top;
-            if(temp<=bottomPage*1.5){
+            if(temp<=bottomPage*1.5 && temp>=0){
                 e.classList="center sactive";}
             else{
                 e.classList="center nactive";

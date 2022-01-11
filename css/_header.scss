@@ -19,7 +19,7 @@ header {
   top: 0;
   right: 0;
   z-index: 1;
-  transform: scale(0);
+  // transform: scale(0);
   transition: transform .6s ease !important;
 
 
@@ -53,6 +53,15 @@ header {
     }
     &:nth-child(6){
       color: rgb(1,169,132);
+    }
+    &:nth-child(7){
+      color: rgb(48,200,102);
+    }
+    &:nth-child(8){
+      color: black;
+    }
+    &:nth-child(9){
+      color: rgb(48,60,55);
     }
     
     &:hover{
@@ -89,6 +98,21 @@ header {
         background-color: rgb(1,169,132);
         box-shadow: 1px 1px 20px rgb(1,169,132),
         -1px -1px 20px rgb(1,169,132);
+      }
+      &:nth-child(7){
+        background-color: rgb(1,169,132);
+        box-shadow: 1px 1px 20px rgb(1,169,132),
+        -1px -1px 20px rgb(1,169,132);
+      }
+      &:nth-child(8){
+        background-color: black;
+        box-shadow: 1px 1px 20px black,
+        -1px -1px 20px black;
+      }
+      &:nth-child(9){
+        background-color: rgb(48,60,55);
+        box-shadow: 1px 1px 20px rgb(48,60,55),
+        -1px -1px 20px rgb(48,60,55);
       }
     }
   }
