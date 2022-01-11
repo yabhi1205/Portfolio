@@ -45,7 +45,7 @@ let section = document.querySelectorAll("section");
 window.addEventListener("scroll",()=>{
         section.forEach((e)=>{
             let temp =e.getBoundingClientRect().top;
-            if(temp<=bottomPage*1.5 && temp>=0){
+            if(temp<=bottomPage*1.5){
                 e.classList="center sactive";}
             else{
                 e.classList="center nactive";
