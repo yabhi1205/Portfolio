@@ -1,6 +1,7 @@
 .skills {
     width: 100vw;
     height: 100vh;
+    position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(../images/coding.png) fixed center center;
     background-size: cover;
     backdrop-filter: blur(8px);
@@ -48,6 +49,7 @@
     padding: auto;
     padding-top: 10%;
     font-size: 6rem;
+    overflow: hidden;
   }
   .skill h3 {
     margin-bottom: 30px;

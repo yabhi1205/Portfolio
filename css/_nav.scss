@@ -1,13 +1,13 @@
 $curve-width:3rem;
 nav {
   height: 100vh;
-  width: 30rem;
+  width: 10rem;
   position: fixed;
   top: 0;
   background-color: #000;
-  z-index: 999;
+  z-index: 9999;
   transition: .4s all ease;
-
+  
   .nav {
     height: 100vh;
     width: 30rem;
@@ -16,51 +16,38 @@ nav {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     padding: 15rem 0;
   }
-  .toggle{
-      position: absolute;
-      top: 2rem;
-      left: 45%;
-      cursor: pointer;
-
-      #close{
-          display: block;
-          font-size: 4rem;
-          color: rgb(146, 16, 16);
-      }
-      #open{
-          display: none;
-          font-size: 4rem;
-          color: rgb(136, 15, 15);
-      }
-  }
+  
   .link {
     position: relative;
     display: flex;
     align-items: center;
-    margin-left: 4rem;
-    padding-left: 4rem;
+    margin-left: 1rem;
+    padding-left: 3rem;
     border-radius: 4rem 0 0 4rem;
+    justify-content: start;
+    transition: .4s all ease;
     
     a{
       transition: .3s all ease;
     }
-
+    
     &:hover a{
       transform: scale(1.4);
     }
   }
-
+  
   .active {
     background-color: black;
     position: relative;
     overflow: visible;
-
+    
     b:nth-child(1) {
       position: absolute;
-      width: 22rem;
+      width: 6rem;
       height: 3rem;
       background-color: black;
       top: -3rem;
+      transition: .4s all ease;
     }
     b:nth-child(1)::after {
       content: "";
@@ -73,10 +60,11 @@ nav {
     }
     b:nth-child(3) {
       position: absolute;
-      width: 22rem;
+      width: 6rem;
       height: 3rem;
       background-color: black;
       bottom: -3rem;
+      transition:.4s all ease;
     }
     b:nth-child(3):after {
         content: "";
@@ -98,6 +86,7 @@ nav {
 
   a {
     font-size: 2rem;
+    text-align: left;
     text-decoration: none;
     letter-spacing: 0.5rem;
     color: white;
@@ -110,32 +99,34 @@ nav {
         font-size: 3rem;
         padding-right: 2rem;
         color: black;
+        display: block;
+    }
+    h2{
+      display: none;
     }
   }
 }
 
 
-.nav1{
-    width: 10rem;
+nav:hover{
+    width: 30rem;
     .link{
-        margin-left: 1rem;
-        padding-left: 3rem;
-        justify-content: start;
+        margin-left: 4rem;
+        padding-left: 4rem;
+        justify-content: none;
 
     }
     .active{
         b:nth-child(1),
         b:nth-child(3){
-            width: 6rem;
+            width: 22rem;
         }
     }
     a{
-        text-align: left;
-        i{
-            display: block;
-        }
+        text-align: none;
+        // 
         h2{
-            display: none;
+            display: block;
         }
     }
 }

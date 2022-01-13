@@ -7,30 +7,21 @@ window.addEventListener("load",()=>{
     linksside.style.transform="scale(1)"
     shrink.style.transform="scale(1)"
 })
-//=========================
-let passion = document.getElementById("passion");
-let passionElement = ["WEB DEVELOPER","PHOTO EDITOR","VIDEO EDITOR"];
-passion.innerText=passionElement[0];
-let i=0;
-setInterval(()=>{
-    i<2?i++:i=0;
-    passion.innerText=passionElement[i];
-},3000)
 //=================nav ==============
 
-let open=document.getElementById("open");
-let close=document.getElementById("close");
+let strip=document.querySelector(".header-strip");
+let stripValue = 100;
+strip.addEventListener("click",()=>{
+    if(stripValue==100){
+        stripValue = 0;
+        strip.classList="strip-active header-strip  center";
+    }
+    else{
+        stripValue = 100;
+        strip.classList="header-strip center";
+    }
+});
 
-open.addEventListener("click",()=>{
-    close.style.display="block";
-    open.style.display="none";
-    document.querySelector("nav").classList="nav1";
-});
-close.addEventListener("click",()=>{
-    close.style.display="none";
-    open.style.display="block";
-    document.querySelector("nav").classList=" ";
-});
 
 
 //======================skills =================
@@ -40,18 +31,37 @@ close.addEventListener("click",()=>{
 //=================sections=================
 let progg= document.querySelector(".Cprogress");
 let link= document.querySelectorAll(".link");
+let model1= document.querySelectorAll(".model1");
+let model2= document.querySelectorAll(".model2");
 let bottomPage=window.innerHeight/6*2;
 let section = document.querySelectorAll("section");
 window.addEventListener("scroll",()=>{
-        section.forEach((e)=>{
+        section.forEach((e,index)=>{
             let temp =e.getBoundingClientRect().top;
+            let temp2 =Math.abs(e.getBoundingClientRect().bottom);
             if(temp<=bottomPage*1.5){
-                e.classList="center sactive";}
+                console.log( temp2)
+                e.classList="center sactive";
+                if((index&1) == 0){//even
+                    model1.forEach((el)=>{
+                        el.style.transform=`translateX(${temp2}px)`;
+                    });
+                    
+
+                }
+                else{//odd
+                    model2.forEach((el)=>{
+                        el.style.transform=`translateX(-${temp2}px)`;
+
+                    });
+
+                }
+            }
             else{
                 e.classList="center nactive";
             }
         });
-        for(let i=0;i<6;i++){
+        for(let i=0;i<5;i++){
             let len=section[i].getBoundingClientRect().top;
             if(len>=-10 && len<=bottomPage){
                  link.forEach((e)=>{

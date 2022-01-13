@@ -12,21 +12,55 @@ header {
   filter: blur(1px);
 }
 .header-strip {
-  width: 12rem;
-  height: 95vh;
+  width: 120px;
+  height: 100vh;
   position: fixed;
   padding-right: 2rem;
   top: 0;
-  right: 0;
-  z-index: 1;
-  // transform: scale(0);
-  transition: transform .6s ease !important;
+  right: -100px;
+  z-index: 9999;
+  transition: all .6s ease !important;
+  overflow-x: visible;
+  border-radius: 54px 0 0 54px ;
 
+
+    
+  
+  &::before{
+    content: "";
+    width: 30px;
+    height: 140px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -10px;
+    z-index: 99999;
+    border-radius: 80px  ;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  }
+
+  &:hover{
+    right: 0;
+    background: transparent;
+  }
+
+  .strip-dots{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0px;
+    color: white;
+    z-index: 99999;
+    font-size: 12px;
+    cursor: pointer;
+  }
 
   a{
-    margin: 12px 0;
-    width: 7rem;
-    height: 7rem;
+    margin: 12px ;
+    margin-left: 50px;
+    width: 8rem;
+    height: 8rem;
     border-radius: 1rem;
     background-color: #fff;
     font-size: 4rem;
@@ -35,6 +69,11 @@ header {
     @include center;
     transition:  .3s all ease;
     box-shadow: 1px 1px 5px black;
+    border-radius: 13px;
+background-color: linear-gradient(315deg, #cacaca, #f0f0f0);
+box-shadow:  -5px -5px 10px #5a5a5a,
+             5px 5px 10px #ffffff;
+   
     
     &:nth-child(1){
       color: #4267B2;
@@ -117,6 +156,16 @@ header {
     }
   }
 }
+.strip-active{
+  right: 0;
+  background: transparent;
+
+  .header-strip::before{
+    background: transparent;
+  }
+}
+
+
 
 .header-text {
   width: 100vw;
@@ -127,7 +176,7 @@ header {
   transition: transform .6s ease !important;
 }
 .header-text h1 {
-  font-size: 10rem;
+  font-size: 12rem;
   letter-spacing: 1rem;
   color: var(--shade4);
   font-family: "Vujahday Script", cursive;

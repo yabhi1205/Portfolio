@@ -43,11 +43,11 @@ html {
 /* ==============nav====================== */
 nav {
   height: 100vh;
-  width: 30rem;
+  width: 10rem;
   position: fixed;
   top: 0;
   background-color: #000;
-  z-index: 999;
+  z-index: 9999;
   transition: 0.4s all ease;
 }
 nav .nav {
@@ -58,29 +58,15 @@ nav .nav {
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   padding: 15rem 0;
 }
-nav .toggle {
-  position: absolute;
-  top: 2rem;
-  left: 45%;
-  cursor: pointer;
-}
-nav .toggle #close {
-  display: block;
-  font-size: 4rem;
-  color: #921010;
-}
-nav .toggle #open {
-  display: none;
-  font-size: 4rem;
-  color: #880f0f;
-}
 nav .link {
   position: relative;
   display: flex;
   align-items: center;
-  margin-left: 4rem;
-  padding-left: 4rem;
+  margin-left: 1rem;
+  padding-left: 3rem;
   border-radius: 4rem 0 0 4rem;
+  justify-content: start;
+  transition: 0.4s all ease;
 }
 nav .link a {
   transition: 0.3s all ease;
@@ -95,10 +81,11 @@ nav .active {
 }
 nav .active b:nth-child(1) {
   position: absolute;
-  width: 22rem;
+  width: 6rem;
   height: 3rem;
   background-color: black;
   top: -3rem;
+  transition: 0.4s all ease;
 }
 nav .active b:nth-child(1)::after {
   content: "";
@@ -111,10 +98,11 @@ nav .active b:nth-child(1)::after {
 }
 nav .active b:nth-child(3) {
   position: absolute;
-  width: 22rem;
+  width: 6rem;
   height: 3rem;
   background-color: black;
   bottom: -3rem;
+  transition: 0.4s all ease;
 }
 nav .active b:nth-child(3):after {
   content: "";
@@ -133,6 +121,7 @@ nav .active a i {
 }
 nav a {
   font-size: 2rem;
+  text-align: left;
   text-decoration: none;
   letter-spacing: 0.5rem;
   color: white;
@@ -145,28 +134,44 @@ nav a i {
   font-size: 3rem;
   padding-right: 2rem;
   color: black;
-}
-
-.nav1 {
-  width: 10rem;
-}
-.nav1 .link {
-  margin-left: 1rem;
-  padding-left: 3rem;
-  justify-content: start;
-}
-.nav1 .active b:nth-child(1),
-.nav1 .active b:nth-child(3) {
-  width: 6rem;
-}
-.nav1 a {
-  text-align: left;
-}
-.nav1 a i {
   display: block;
 }
-.nav1 a h2 {
+nav a h2 {
   display: none;
+}
+
+nav:hover {
+  width: 30rem;
+}
+nav:hover .link {
+  margin-left: 4rem;
+  padding-left: 4rem;
+  justify-content: none;
+}
+nav:hover .active b:nth-child(1),
+nav:hover .active b:nth-child(3) {
+  width: 22rem;
+}
+nav:hover a {
+  text-align: none;
+}
+nav:hover a h2 {
+  display: block;
+}
+
+/* ==============nav====================== */
+.model1 {
+  position: absolute;
+  left: -180px;
+  bottom: 0;
+  z-index: 99;
+}
+
+.model2 {
+  position: absolute;
+  right: -180px;
+  bottom: 0px;
+  z-index: 99;
 }
 
 /* ==============header====================== */
@@ -185,19 +190,49 @@ header {
 }
 
 .header-strip {
-  width: 12rem;
-  height: 95vh;
+  width: 120px;
+  height: 100vh;
   position: fixed;
   padding-right: 2rem;
   top: 0;
+  right: -100px;
+  z-index: 9999;
+  transition: all 0.6s ease !important;
+  overflow-x: visible;
+  border-radius: 54px 0 0 54px;
+}
+.header-strip::before {
+  content: "";
+  width: 30px;
+  height: 140px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -10px;
+  z-index: 99999;
+  border-radius: 80px;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+.header-strip:hover {
   right: 0;
-  z-index: 1;
-  transition: transform 0.6s ease !important;
+  background: transparent;
+}
+.header-strip .strip-dots {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0px;
+  color: white;
+  z-index: 99999;
+  font-size: 12px;
+  cursor: pointer;
 }
 .header-strip a {
-  margin: 12px 0;
-  width: 7rem;
-  height: 7rem;
+  margin: 12px;
+  margin-left: 50px;
+  width: 8rem;
+  height: 8rem;
   border-radius: 1rem;
   background-color: #fff;
   font-size: 4rem;
@@ -209,6 +244,9 @@ header {
   flex-direction: column;
   transition: 0.3s all ease;
   box-shadow: 1px 1px 5px black;
+  border-radius: 13px;
+  background-color: linear-gradient(315deg, #cacaca, #f0f0f0);
+  box-shadow: -5px -5px 10px #5a5a5a, 5px 5px 10px #ffffff;
 }
 .header-strip a:nth-child(1) {
   color: #4267B2;
@@ -279,6 +317,14 @@ header {
   box-shadow: 1px 1px 20px #303c37, -1px -1px 20px #303c37;
 }
 
+.strip-active {
+  right: 0;
+  background: transparent;
+}
+.strip-active .header-strip::before {
+  background: transparent;
+}
+
 .header-text {
   width: 100vw;
   height: 100vh;
@@ -289,7 +335,7 @@ header {
 }
 
 .header-text h1 {
-  font-size: 10rem;
+  font-size: 12rem;
   letter-spacing: 1rem;
   color: var(--shade4);
   font-family: "Vujahday Script", cursive;
@@ -319,6 +365,7 @@ main {
 .skills {
   width: 100vw;
   height: 100vh;
+  position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/coding.png) fixed center center;
   background-size: cover;
   -webkit-backdrop-filter: blur(8px);
@@ -368,6 +415,7 @@ main {
   padding: auto;
   padding-top: 10%;
   font-size: 6rem;
+  overflow: hidden;
 }
 
 .skill h3 {
@@ -572,6 +620,7 @@ main {
   max-width: 80vw;
   width: 40vw;
   height: 100vh;
+  z-index: 999;
 }
 #about .abouttext h1 {
   font-size: 4rem;
@@ -685,7 +734,7 @@ main {
   box-shadow: inset 1px 1px 5px black, 0px 0px 10px white;
   color: black;
   margin: 2rem;
-  z-index: 10;
+  z-index: 999;
 }
 #contact .Cprogress::before {
   content: "";
@@ -961,19 +1010,11 @@ main {
   html {
     font-size: 22% !important;
   }
-
-  .header-strip {
-    width: 16rem;
-  }
 }
 /* XS Portrait */
 @media (max-width: 479px) {
   html {
     font-size: 15% !important;
-  }
-
-  .header-strip {
-    width: 18rem;
   }
 }
 @media (max-width: 900px) {
@@ -996,6 +1037,7 @@ main {
   nav .link {
     margin-left: 4rem;
     border-radius: 0 0 100px 100px;
+    justify-content: center;
   }
   nav a i {
     font-size: 25px;
@@ -1006,7 +1048,7 @@ main {
   }
 
   .active b:nth-child(1) {
-    width: 3rem;
+    width: 3rem !important;
     height: 70px !important;
     top: 0 !important;
     left: -3rem;
@@ -1018,7 +1060,7 @@ main {
     border-bottom-right-radius: 0rem !important;
   }
   .active b:nth-child(3) {
-    width: 3rem;
+    width: 3rem !important;
     height: 70px !important;
     top: 0;
     right: -3rem;
@@ -1030,11 +1072,27 @@ main {
     border-top-right-radius: 0rem !important;
   }
 
-  .nav1 {
+  nav:hover {
     width: 100vw !important;
   }
-  .nav1 .link {
+  nav:hover .link {
+    margin-left: 4rem;
+    padding-left: 3rem;
     justify-content: center;
+  }
+  nav:hover .active b:nth-child(1),
+nav:hover .active b:nth-child(3) {
+    width: 3rem;
+  }
+  nav:hover a {
+    text-align: left;
+  }
+  nav:hover a h2 {
+    display: none;
+  }
+
+  .header-strip {
+    height: 91vh;
   }
 
   .s-box {
