@@ -80,6 +80,7 @@
         overflow: visible;
         color: rgba(245, 245, 245, 0.3);
         margin: 0 6rem;
+        z-index: 99999;
         transition: .3s all ease;
         
         &:hover{
