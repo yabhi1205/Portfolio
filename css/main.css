@@ -36,7 +36,7 @@ html {
   width: 100vw;
   height: 100vh;
   background: var(--black) url(../images/loader.gif) no-repeat center center;
-  z-index: 999;
+  z-index: 999999999;
   display: block;
 }
 
@@ -47,7 +47,7 @@ nav {
   position: fixed;
   top: 0;
   background-color: #000;
-  z-index: 9999;
+  z-index: 9999999 !important;
   transition: 0.4s all ease;
 }
 nav .nav {
@@ -317,14 +317,6 @@ header {
   box-shadow: 1px 1px 20px #303c37, -1px -1px 20px #303c37;
 }
 
-.strip-active {
-  right: 0;
-  background: transparent;
-}
-.strip-active .header-strip::before {
-  background: transparent;
-}
-
 .header-text {
   width: 100vw;
   height: 100vh;
@@ -366,7 +358,7 @@ main {
   width: 100vw;
   height: 100vh;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/coding.png) fixed center center;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(253, 253, 253, 0.5)), url(../images/coding.png) fixed center center;
   background-size: cover;
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
@@ -375,15 +367,13 @@ main {
 .s-box {
   min-width: 80%;
   min-height: 70%;
-  background: #eeaeca;
-  background: radial-gradient(circle, #eeaeca 0%, #94bbe9 100%);
   border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   box-shadow: 0 0 20px black;
   position: relative;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(29, 24, 24, 0.8);
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
 }
@@ -396,7 +386,7 @@ main {
   position: absolute;
   font-size: 13rem;
   font-weight: bold;
-  filter: opacity(0.2);
+  filter: opacity(0.3);
   text-align: right;
   right: 10%;
   z-index: 0;
@@ -414,18 +404,21 @@ main {
   margin-top: 5px;
   padding: auto;
   padding-top: 10%;
-  font-size: 6rem;
+  font-size: 10rem;
   overflow: hidden;
 }
 
 .skill h3 {
   margin-bottom: 30px;
+  font-size: 3rem;
+  color: white;
 }
 
 .skill ion-icon,
 .skill i,
 .skill span {
-  color: var(--shade3);
+  font-size: 3rem;
+  color: #98fb79;
   margin-right: 5px;
   font-weight: 700;
 }
@@ -445,8 +438,8 @@ main {
   position: absolute;
   top: 0;
   left: -100%;
-  background: #020024;
-  background: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 82%, rgba(0, 212, 255, 0.2357317927) 100%);
+  background-color: #00DBDE;
+  background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
 }
 
 .progress::before {
@@ -1044,10 +1037,6 @@ main {
     font-size: 25px;
   }
 
-  .toggle {
-    display: none;
-  }
-
   .active b:nth-child(1) {
     width: 3rem !important;
     height: 70px !important;
@@ -1095,12 +1084,21 @@ nav:hover .active b:nth-child(3) {
   .header-strip {
     height: 91vh;
   }
+  .header-strip::before {
+    width: 20px;
+  }
+  .header-strip .strip-dots {
+    left: -8px;
+  }
 
   .s-box {
     grid-template-columns: 1fr !important;
   }
 
-  .skill h3 {
+  .skill h3,
+.skill ion-icon,
+.skill i,
+.skill span {
     font-size: 6rem !important;
   }
 
@@ -1131,6 +1129,12 @@ nav:hover .active b:nth-child(3) {
   #contact h3 {
     font-size: 8rem;
     margin-top: 3rem !important;
+  }
+  #contact input, #contact textarea {
+    padding: 5rem 0 5rem 5rem !important;
+  }
+  #contact input[type=submit] {
+    padding: 5rem 10rem 5rem 10rem !important;
   }
   #contact .formBox {
     top: 30%;
@@ -1164,5 +1168,10 @@ nav:hover .active b:nth-child(3) {
   }
   #about .abouttext h2 {
     font-size: 4rem;
+  }
+
+  .model1,
+.model2 {
+    display: none !important;
   }
 }/*# sourceMappingURL=main.css.map */

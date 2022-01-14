@@ -5,7 +5,7 @@ nav {
   position: fixed;
   top: 0;
   background-color: #000;
-  z-index: 9999;
+  z-index: 9999999 !important;
   transition: .4s all ease;
   
   .nav {

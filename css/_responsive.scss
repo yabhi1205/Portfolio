@@ -71,9 +71,6 @@
       }
     }
   }
-  .toggle{
-    display: none;
-  }
 
   .active{
     b:nth-child(1) {
@@ -126,11 +123,24 @@
   }
   .header-strip{
     height: 91vh;
+    
+    &::before{
+      width: 20px;
+    }
+    .strip-dots{
+      left: -8px;
+    }
   }
+
+
+
   .s-box{
       grid-template-columns: 1fr !important;
   }
-  .skill h3{
+  .skill h3,
+  .skill ion-icon,
+  .skill i,
+  .skill span {
     font-size: 6rem !important;
   }
   .project{
@@ -164,6 +174,13 @@
     h3{
       font-size: 8rem;
       margin-top: 3rem !important;
+    }
+
+    input,textarea{
+      padding: 5rem 0  5rem 5rem !important;
+    }
+    input[type=submit]{
+      padding: 5rem  10rem  5rem 10rem  !important;
     }
     .formBox{
       top: 30%;
@@ -201,5 +218,9 @@
         font-size: 4rem;
       }
     }
+  }
+  .model1,
+  .model2{
+    display: none !important;
   }
 }

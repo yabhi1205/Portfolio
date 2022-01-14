@@ -14,11 +14,11 @@ let stripValue = 100;
 strip.addEventListener("click",()=>{
     if(stripValue==100){
         stripValue = 0;
-        strip.classList="strip-active header-strip  center";
+        strip.style.right=`${stripValue}px`;
     }
     else{
         stripValue = 100;
-        strip.classList="header-strip center";
+        strip.style.right=`-${stripValue}px`;
     }
 });
 
