@@ -148,24 +148,6 @@
     height: 75vh;
     margin-bottom: 70px;
   }
-  .photo{
-    // grid-gap: 0rem !important;
-
-
-    .photo1{
-      grid-template-columns: 1fr !important;
-      padding: 0 !important;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
-      margin-right: 5rem;
-
-      div{
-        grid-row: auto !important;
-        grid-column: auto !important;
-        grid-gap: 5rem;
-      }
-    }
-    
-  }
   #contact{
     font-size: 5rem !important;
     h2{
@@ -197,10 +179,9 @@
 
   #about{
     .aboutback{
-      background-position: left;
-      // display: none;
+      background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0,0,0,0.4)),url("../images/dp.jpeg") fixed;
+      background-position: center;
     }
-
     .abouttext{
       left: 0%;
       right: 0;

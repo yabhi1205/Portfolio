@@ -40,7 +40,6 @@ window.addEventListener("scroll",()=>{
             let temp =e.getBoundingClientRect().top;
             let temp2 =Math.abs(e.getBoundingClientRect().bottom);
             if(temp<=bottomPage*1.5){
-                console.log( temp2)
                 e.classList="center sactive";
                 if((index&1) == 0){//even
                     model1.forEach((el)=>{
