@@ -60,6 +60,7 @@ window.addEventListener("scroll",()=>{
                 e.classList="center nactive";
             }
         });
+        // for adjust navbar link
         for(let i=0;i<5;i++){
             let len=section[i].getBoundingClientRect().top;
             if(len>=-10 && len<=bottomPage){

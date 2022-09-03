@@ -33,6 +33,42 @@ html{
   align-items: center;
   flex-direction: column;
 }
+/* custom scroll bar */
+::-webkit-scrollbar {
+  width: 15px;
+  background-color: transparent;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    margin: 5px;
+    background: #fff;
+    border-radius: 20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: #77bee7;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #49a8df;
+}
+
+// select
+::-moz-selection{
+  color: black !important;
+  background: rgba(255, 255, 255, 0.3);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+::selection {
+  color: black !important;
+  background: rgba(255, 255, 255, 0.3);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
 /* .preloader ----------------------------------- */
 .preloader {
   position: fixed;
@@ -65,7 +101,7 @@ main{
 /* qrcode==================================== */
 @import "qrscode.scss";
 /* ==============animation====================== */
-@import "animation.scss";
+// @import "animation.scss";
 /* 
 /* ==============responsive====================== */
 @import "responsive.scss";

@@ -71,7 +71,7 @@
     height: 100%;
     position: absolute;
     top: 0;
-    left: -100%;
+    left: 0%;
     background-color: #00DBDE;
   background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
 
@@ -82,7 +82,7 @@
     height: 100%;
     position: absolute;
     top: 0;
-    left: -100%;
+    left: 0%;
     background-color: transparent;
     border-right: 3px solid black;
   }
@@ -94,22 +94,22 @@
   /* css  */
   .pro-2::after,
   .pro-2::before {
-    width: 65%;
+    width: 75%;
   }
   /* js  */
   .pro-3::after,
   .pro-3::before {
-    width: 55%;
+    width: 65%;
   }
-  /* c  */
+  /* react js  */
   .pro-4::after,
   .pro-4::before {
-    width: 55%;
+    width: 50%;
   }
   /* java  */
   .pro-5::after,
   .pro-5::before {
-    width: 40%;
+    width: 60%;
   }
   /* edit */
   .pro-6::after,
