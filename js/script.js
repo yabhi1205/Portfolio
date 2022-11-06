@@ -102,6 +102,7 @@ prev.addEventListener('click',()=>{
     }
     swap();
 });
+
 next.addEventListener('click',()=>{
     if(countProg!=100){
         countProg+=25;

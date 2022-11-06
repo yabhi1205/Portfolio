@@ -225,7 +225,7 @@ header {
 .header-bc {
   width: 110vw;
   height: 100vh;
-  background: linear-gradient(transparent 80%, black), url("../images/header-bc.jpeg") fixed center center;
+  background: linear-gradient(transparent 80%, black), url("../images/header-bc.webp") fixed center center;
   background-size: 100% 100%;
   filter: blur(1px);
 }
@@ -403,7 +403,7 @@ main {
   width: 100vw;
   height: 100vh;
   position: relative;
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(253, 253, 253, 0.5)), url(../images/coding.png) fixed center center;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(253, 253, 253, 0.5)), url(../images/coding.webp) fixed center center;
   background-size: cover;
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
@@ -538,7 +538,7 @@ main {
   width: 100vw;
   height: 100vh;
   position: relative;
-  background: url("../images/pro-back.jpg") fixed center;
+  background: url("../images/pro-back.webp") fixed center;
   background-size: cover;
 }
 
@@ -591,7 +591,7 @@ main {
 #photo {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/photo-background.jpeg") center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/photo-background.webp") center;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -648,7 +648,7 @@ main {
   position: absolute;
   bottom: 0;
   overflow: hidden;
-  background: url("../images/about-back.jpeg") fixed;
+  background: url("../images/about-back.webp") fixed;
   background-position: center;
   background-size: cover;
 }
@@ -680,7 +680,7 @@ main {
   height: 100vh;
   font-size: 4rem;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/contact-back.jpg") fixed center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/contact-back.webp") fixed center no-repeat;
   background-size: cover;
   color: white;
 }
@@ -962,7 +962,7 @@ nav:hover .active b:nth-child(3) {
     height: 45rem !important;
   }
   #about .aboutback {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/dp.jpeg") fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/dp.webp") fixed;
     background-position: center;
   }
   #about .abouttext {
