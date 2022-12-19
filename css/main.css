@@ -76,6 +76,28 @@ html {
   display: block;
 }
 
+.button {
+  padding: 2rem;
+  font-size: 2.5rem;
+  background-color: #77bee7;
+  color: #000;
+  outline: none;
+  border-radius: 3rem;
+  border: 0;
+  box-shadow: 5px 5px 20px black;
+  transition: 0.2s all ease;
+}
+.button a {
+  color: #000;
+  text-decoration: none;
+}
+.button:hover {
+  transform: scale(1.05);
+}
+.button:active {
+  transform: scale(0.95);
+}
+
 /* ==============nav====================== */
 nav {
   height: 100vh;
@@ -88,7 +110,7 @@ nav {
 }
 nav .nav {
   height: 100vh;
-  width: 30rem;
+  width: 33rem;
   background-color: rgb(92, 151, 240);
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -108,7 +130,7 @@ nav .link a {
   transition: 0.3s all ease;
 }
 nav .link:hover a {
-  transform: scale(1.4);
+  transform: scale(1.25);
 }
 nav .active {
   background-color: black;
@@ -177,7 +199,7 @@ nav a h2 {
 }
 
 nav:hover {
-  width: 30rem;
+  width: 33rem;
 }
 nav:hover .link {
   margin-left: 4rem;
@@ -186,7 +208,7 @@ nav:hover .link {
 }
 nav:hover .active b:nth-child(1),
 nav:hover .active b:nth-child(3) {
-  width: 22rem;
+  width: 25rem;
 }
 nav:hover a {
   text-align: none;
@@ -675,117 +697,104 @@ main {
 }
 
 /* contact==================================== */
+#post {
+  width: 100vw;
+  height: 110vh;
+  background: url("../images/post.jpg");
+  position: relative;
+}
+#post button {
+  position: absolute;
+  right: 5rem;
+  bottom: 3rem;
+}
+#post .posts {
+  width: 80vw;
+  height: 80vh;
+  margin: 2rem;
+  flex-direction: row !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: visible;
+  justify-content: space-evenly !important;
+}
+#post .posts iframe {
+  width: 50rem;
+  height: inherit;
+  border-radius: 2rem;
+  box-shadow: 5px 5px 40px black;
+  transition: 0.3s all ease;
+  transform: scale(0.9);
+  position: relative;
+}
+#post .posts iframe:hover {
+  transform: scale(1);
+}
+#post .posts .mid {
+  transform: scale(0.95);
+}
+#post .posts .mid:hover {
+  transform: scale(1.05);
+}
+
+/* contact==================================== */
 #contact {
   width: 100vw;
   height: 100vh;
   font-size: 4rem;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/contact-back.webp") fixed center no-repeat;
+  background: url("../images/contact-back.jpg") fixed center no-repeat;
   background-size: cover;
-  color: white;
 }
-#contact h2 {
-  text-align: center;
-  font-size: 6rem;
-  color: orange;
-}
-#contact h3 {
-  font-size: 4rem;
-  text-align: center;
-}
-#contact .Cform {
-  flex-direction: row;
-  margin-top: 4rem;
-}
-#contact .Cform input, #contact .Cform textarea {
-  margin: 2rem;
-  padding: 1rem;
-  padding-left: 20px;
-  border: none;
-  outline: none;
-  border-radius: 2rem;
-  box-shadow: inset 1px 1px 10px black, inset -1px -1px 10px black;
-  transition: 1s all ease;
-}
-#contact .Cform input:active, #contact .Cform input:visited, #contact .Cform textarea:active, #contact .Cform textarea:visited {
-  box-shadow: 2px 2px 10px white, inset 1px 1px 10px black, inset -1px -1px 10px black;
-}
-#contact .Cform input::-webkit-outer-spin-button,
-#contact .Cform input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-#contact .Cform input[type=number] {
-  -moz-appearance: textfield;
-}
-#contact .formBox {
-  position: absolute;
-  top: 10%;
-  left: -150vw;
-  margin: 0 auto;
+#contact .left {
+  border-radius: 5rem;
+  width: 70rem;
+  height: 100rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 5px 5px 500px white, -5px -5px 500px white;
   transition: 0.3s all ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.556);
+  padding: 2rem;
 }
-#contact .formBox:nth-child(1) {
-  left: 0px;
-  right: 0;
-}
-#contact .Cdown {
-  flex-direction: row;
-  font-size: 6rem;
-  margin-top: 30rem;
-}
-#contact .Cprevious,
-#contact .Cnext {
-  height: 9rem;
-  cursor: pointer;
-  position: relative;
-  padding-top: 3rem;
-  overflow: visible;
-  color: rgba(245, 245, 245, 0.3);
-  margin: 0 6rem;
-  z-index: 99999;
+#contact .left img {
+  width: 70%;
+  border-radius: 50%;
   transition: 0.3s all ease;
+  box-shadow: 2px 2px 10px black, inset 1px 1px 10px black;
 }
-#contact .Cprevious:hover,
-#contact .Cnext:hover {
-  transform: scale(1.1);
+#contact .left hr {
+  width: 90% !important;
+  margin: 2rem 0;
+  height: 2px;
+  background-color: rgb(251, 245, 245) !important;
 }
-#contact .Cprevious:hover::before,
-#contact .Cnext:hover::before {
-  content: "Previous";
-  color: rgb(20, 138, 138);
-  font-size: 3rem;
-  position: absolute;
-  top: 0rem;
-  z-index: 100;
+#contact .left p {
+  color: rgb(78, 76, 76);
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.556);
 }
-#contact .Cnext {
-  color: white;
+#contact .left p a {
+  margin-right: 2rem;
 }
-#contact .Cnext:hover::before {
-  content: "Next";
+#contact .left p i {
+  margin-right: 0.5rem;
 }
-#contact .Cprogress {
-  width: 25rem;
-  height: 25rem;
-  background: conic-gradient(white 25%, white 50%, white 75%, white 100%);
-  border-radius: 50%;
-  position: relative;
-  box-shadow: inset 1px 1px 5px black, 0px 0px 10px white;
-  color: black;
-  margin: 2rem;
-  z-index: 999;
+#contact .left:hover {
+  transform: scale(1.05);
 }
-#contact .Cprogress::before {
-  content: "";
-  position: absolute;
-  top: 10%;
-  width: 80%;
-  height: 80%;
-  background-color: white;
-  border-radius: 50%;
-  box-shadow: inset 1px 1px 10px black;
-  z-index: -1;
+#contact .left:hover img {
+  transform: scale(1.06);
 }
 
 /* qrcode==================================== */
@@ -934,32 +943,24 @@ nav:hover .active b:nth-child(3) {
     height: 75vh;
     margin-bottom: 70px;
   }
-  #contact {
-    font-size: 5rem !important;
+  #contact .left {
+    width: 80vw;
+    min-height: 50vh;
   }
-  #contact h2 {
-    font-size: 10rem;
+  #contact .left img {
+    width: 50%;
   }
-  #contact h3 {
-    font-size: 8rem;
-    margin-top: 3rem !important;
+  #contact .left h5 {
+    font-size: 5rem;
   }
-  #contact input, #contact textarea {
-    padding: 5rem 0 5rem 5rem !important;
+  #contact .left p {
+    font-size: 3rem;
   }
-  #contact input[type=submit] {
-    padding: 5rem 10rem 5rem 10rem !important;
+  #contact .left:hover {
+    transform: none;
   }
-  #contact .formBox {
-    top: 30%;
-  }
-  .Cdown {
-    font-size: 10rem !important;
-    margin-top: 100rem !important;
-  }
-  .Cprogress {
-    width: 45rem !important;
-    height: 45rem !important;
+  #contact .left:hover img {
+    transform: none;
   }
   #about .aboutback {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/dp.webp") fixed;
@@ -984,5 +985,28 @@ nav:hover .active b:nth-child(3) {
   .model1,
 .model2 {
     display: none !important;
+  }
+  #post {
+    height: 180vh !important;
+  }
+  #post .button {
+    right: 10rem !important;
+  }
+  #post .posts {
+    width: 100vw;
+    height: 170vh !important;
+    justify-content: ceter;
+    flex-direction: column !important;
+  }
+  #post .posts iframe {
+    border-radius: 4rem;
+    width: 80vw;
+  }
+  #post .posts iframe:hover {
+    transform: none !important;
+  }
+  .button {
+    font-size: 4rem;
+    padding: 2rem;
   }
 }/*# sourceMappingURL=main.css.map */

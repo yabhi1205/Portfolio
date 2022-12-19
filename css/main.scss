@@ -78,6 +78,29 @@ html{
   z-index: 999999999;
   display: block;
 }
+// button
+.button{
+  padding: 2rem;
+  font-size: 2.5rem;
+  background-color: #77bee7;
+  color: #000;
+  outline: none;
+  border-radius: 3rem;
+  border: 0;
+  box-shadow: 5px 5px 20px black;
+  transition: .2s all ease;
+  a{
+    color: #000;
+    text-decoration: none;
+  }
+
+  &:hover{
+    transform: scale(1.05)
+  }
+  &:active{
+    transform: scale(.95);
+  }
+}
 /* ==============nav====================== */
 @import "nav.scss";
 /* ==============nav====================== */
@@ -96,6 +119,8 @@ main{
 @import "photo.scss";
 /* about==================================== */
 @import "about.scss";
+/* contact==================================== */
+@import "post.scss";
 /* contact==================================== */
 @import "contact.scss";
 /* qrcode==================================== */

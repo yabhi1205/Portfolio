@@ -10,7 +10,7 @@ nav {
   
   .nav {
     height: 100vh;
-    width: 30rem;
+    width: 33rem;
     background-color: rgb(92, 151, 240);
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -32,7 +32,7 @@ nav {
     }
     
     &:hover a{
-      transform: scale(1.4);
+      transform: scale(1.25);
     }
   }
   
@@ -109,7 +109,7 @@ nav {
 
 
 nav:hover{
-    width: 30rem;
+    width: 33rem;
     .link{
         margin-left: 4rem;
         padding-left: 4rem;
@@ -119,7 +119,7 @@ nav:hover{
     .active{
         b:nth-child(1),
         b:nth-child(3){
-            width: 22rem;
+            width: 25rem;
         }
     }
     a{

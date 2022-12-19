@@ -43,6 +43,11 @@
         </div>
         <div class="link">
           <b></b>
+          <a href="#post"><i class="fa-brands fa-linkedin-in"></i><h2>POST</h2></a>
+          <b></b>
+        </div>
+        <div class="link">
+          <b></b>
           <a href="#contact"><i class="fas fa-address-book"></i><h2>CONTACT</h2></a>
           <b></b>
         </div>
@@ -194,80 +199,41 @@
        
       </section>
 
+      <!-- post and updates -->
+      <section id="post" class="center">
+        <div class="model1" >
+          <img src="images/char5.png" alt="" >
+        </div>
+        <div class="posts" id="posts">
+          <iframe data-aos="zoom-in-right" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7009022592535654401"  title="Embedded post" ></iframe>
+          <iframe data-aos="zoom-in-up" src="https://www.linkedin.com/embed/feed/update/urn:li:activity:6997271310921809920"  title="Embedded post" class="mid"></iframe>
+          <iframe data-aos="zoom-in-left" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7002143492399349760"  title="Embedded post"></iframe>
+        </div>
+        <button class="button"><a href="post.html" >Read More...</a></button>
+      </section>
+
       <!-- contact ----------------------------------------------- -->
       <section id="contact" class="center">
-        <div class="model1" style="left: 200px; ">
-          <img src="images/char5.webp" alt="" >
+        <!-- <div class="model2" >
+          <img src="images/char6.webp" alt="" >
+        </div> -->
+        <div class="left" data-aos="zoom-in-up" style="background-color: white;">
+          <img src="./images/self.png" alt="">
+          <hr>
+          <h5>😎 Abhishek Singhal</h5>
+          <hr>
+          <p><i class="fa-solid fa-phone"></i>+91 9927245142</p>
+          <hr>
+          <p><i class="fa-solid fa-envelope"></i>abhisinghal112001@gmail.com</p>
+          <hr>
+          <p><i class="fa-solid fa-location-dot"></i>Meerut, Uttar Pradesh</p>
+          <hr>
+          <p><a href = "mailto: abhisinghal112001@gmail.com">Send Email</a> 
+            <a href="https://wa.me/+919927245142">Whatsapp me</a>
+          </p>
+          <hr>
+          <button class="button" > <a href="https://drive.google.com/drive/folders/1URV__eC1wn_RMi7XYGmlc6C2WdT1dK6o?usp=sharing">Resume</a></button>
         </div>
-        <form action="javascript:sendmail()" method="post">
-          <div class="formBox" id="hi">
-            <div class="CText shrink">
-              <h2>Hi! What is your Name</h2>
-            </div>
-            <div class="Cform center">
-              <div class="LCform left">
-                <h3>First Name</h3>
-                <input type="text" id="Fname" required placeholder=" First Name">
-              </div>
-              <div class="RCform right">
-                <h3>Last Name</h3>
-                <input type="text" id="Lname"  placeholder="Last Name">
-              </div>
-            </div>
-          </div>
-          <div class="formBox">
-            <div class="CText">
-              <h2>Hey! Let me know you</h2>
-            </div>
-            <div class="Cform center">
-              <div class="LCform">
-                <h3>Phone no.</h3>
-                <input type="number" id="num" required placeholder=" Phone no.">
-              </div>
-            </div>
-          </div>
-          <div class="formBox">
-            <div class="CText">
-              <h2>Hey! Let me know you</h2>
-            </div>
-            <div class="Cform center">
-              <div class="RCform">
-                <h3>Email Id.</h3>
-                <input type="email" id="mail" required placeholder="Email Id.">
-              </div>
-            </div>
-          </div>
-          <div class="formBox">
-            <div class="CText">
-              <h2>Type without any Hesitation</h2>
-            </div>
-            <div class="Cform center">
-                <textarea name="" id="detail" cols="50" rows="3"placeholder="Describe your problem........" required></textarea>
-              
-            </div>
-          </div>
-          <div class="formBox">
-            <div class="CText">
-              <h2>Let me know what you want to say!</h2>
-              
-            </div>
-            <div class="Cform center">
-              <input type="submit" id="submit" value="Punch ME">
-            </div>
-          </div>
-        </form>
-        <div class="Cdown center">
-          <div class="Cprevious left">
-            <!-- <i class="far fa-hand-point-left"></i> -->
-            ⇐
-          </div>
-          <div class="Cprogress center shrink start">
-            0%
-          </div>
-          <div class="Cnext right">
-            <!-- <i class="far fa-hand-point-right"></i> -->
-            ⇒
-          </div>
         </div>
       </section>
 
@@ -288,8 +254,8 @@
       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
       <script>
         AOS.init({
-          offset: 150, // offset (in px) from the original trigger point
-          duration: 500,
+          offset: 250, // offset (in px) from the original trigger point
+          duration: 800,
         });
       </script>
 

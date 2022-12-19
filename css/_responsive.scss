@@ -149,32 +149,26 @@
     margin-bottom: 70px;
   }
   #contact{
-    font-size: 5rem !important;
-    h2{
-      font-size: 10rem;
+    .left{
+      width: 80vw;
+      min-height: 50vh;
+      img{
+        width: 50%;
+      }
+      h5{
+        font-size: 5rem;
+      }
+      p{
+        font-size: 3rem;
+      }
+      &:hover{
+        transform: none;
+        img{
+          transform: none
+        }
+       
+      }
     }
-    h3{
-      font-size: 8rem;
-      margin-top: 3rem !important;
-    }
-
-    input,textarea{
-      padding: 5rem 0  5rem 5rem !important;
-    }
-    input[type=submit]{
-      padding: 5rem  10rem  5rem 10rem  !important;
-    }
-    .formBox{
-      top: 30%;
-    }
-  }
-  .Cdown{
-    font-size: 10rem !important;
-    margin-top: 100rem !important;
-  }
-  .Cprogress{
-    width: 45rem !important;
-    height: 45rem !important;
   }
 
   #about{
@@ -203,5 +197,32 @@
   .model1,
   .model2{
     display: none !important;
+  }
+  #post{
+    .button{
+      right: 10rem !important;
+    }
+
+    height: 180vh !important;
+     .posts{
+      width: 100vw;
+      height: 170vh !important;
+      justify-content: ceter;
+      flex-direction: column !important;
+      
+      iframe{
+        border-radius: 4rem;
+        width: 80vw;
+
+        &:hover{
+          transform: none !important; 
+        }
+      }
+     }
+
+  }
+  .button{
+    font-size: 4rem;
+    padding: 2rem;
   }
 }

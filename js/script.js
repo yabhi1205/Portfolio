@@ -61,7 +61,7 @@ window.addEventListener("scroll",()=>{
             }
         });
         // for adjust navbar link
-        for(let i=0;i<5;i++){
+        for(let i=0;i<6;i++){
             let len=section[i].getBoundingClientRect().top;
             if(len>=-10 && len<=bottomPage){
                  link.forEach((e)=>{
@@ -74,7 +74,10 @@ window.addEventListener("scroll",()=>{
     
 
 
+
+
 //======================contact===================
+/*
 let next = document.querySelector(".Cnext");
 let prev = document.querySelector(".Cprevious");
 let countProg = 0;
@@ -187,3 +190,4 @@ document.getElementById("submit").addEventListener("click",()=>{
         }
     );
 })
+*/

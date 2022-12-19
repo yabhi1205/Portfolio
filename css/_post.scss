@@ -1,0 +1,42 @@
+#post {
+    width: 100vw;
+    height: 110vh;
+    background: url("../images/post.jpg");
+    position: relative;
+
+    button{
+        position: absolute;
+        right: 5rem;
+        bottom: 3rem;
+    }
+
+    .posts {
+        width: 80vw;
+        height: 80vh;
+        margin: 2rem;
+        flex-direction: row !important;
+        @include center;
+        overflow: visible;
+        justify-content: space-evenly !important;
+
+        iframe {
+            width: 50rem;
+            height: inherit;
+            border-radius: 2rem;
+            box-shadow: 5px 5px 40px black;
+            transition: .3s all ease;
+            transform: scale(.9);
+            position: relative;
+
+            &:hover{
+                transform: scale(1);
+            }
+        }
+        .mid{
+            transform: scale(.95);
+            &:hover{
+                transform: scale(1.05);
+            }
+        }
+    }
+}
