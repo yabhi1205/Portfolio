@@ -5,24 +5,29 @@
     position: relative;
     background: url("../images/contact-back.jpg") fixed center no-repeat;
     background-size: cover;
+
+    *{
+        overflow: hidden;
+    }
     
 
     .left{
         border-radius: 5rem;
-        width: 70rem;
-        height: 100rem;
+        width: 60rem;
+        aspect-ratio: 12/16;
         @include center;
-        background-color: rgba(255, 255, 255, 0.8) !important;
-        box-shadow: 5px 5px 500px white,-5px -5px 500px white;
+        background-color: rgba(91, 91, 91, 0.8) !important;
+        box-shadow: 5px 5px 500px rgb(127, 126, 126),-5px -5px 500px rgb(97, 96, 96);
         transition: .3s all ease;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.556);
         padding: 2rem;
+        color: white;
 
         img{
-            width: 70%;
+            width: 50%;
             border-radius: 50%;
             transition: .3s all ease;
-            box-shadow: 2px 2px 10px black,inset 1px 1px 10px black;
+            box-shadow: 2px 2px 10px rgb(127, 127, 127);
         }
 
         hr{
@@ -32,14 +37,16 @@
          background-color: rgb(251, 245, 245) !important;
         }
         p{
-            color: rgb(78, 76, 76);
+            color: rgb(207, 206, 206);
             font-size: 2rem;
             @include center;
             flex-direction: row !important;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.556);
 
             a{
+                padding: 1rem !important;
                 margin-right: 2rem;
+                color: white;
             }
             i{
                 margin-right:.5rem ;

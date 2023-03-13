@@ -88,10 +88,10 @@ box-shadow:  -5px -5px 10px #5a5a5a,
       color: #171515;
     }
     &:nth-child(6){
-      color: #0088CC;
+      color: rgb(1,169,132);
     }
     &:nth-child(7){
-      color: rgb(1,169,132);
+      color: gray;
     }
     &:nth-child(8){
       color: rgb(48,200,102);
@@ -128,12 +128,12 @@ box-shadow:  -5px -5px 10px #5a5a5a,
         box-shadow: 1px 1px 20px #171515,
         -1px -1px 20px #171515;
       }
-      &:nth-child(6){
-        background-color: #0088CC;
-        box-shadow: 1px 1px 20px #0088CC,
-        -1px -1px 20px #0088CC;
-      }
       &:nth-child(7){
+        background-color: gray;
+        box-shadow: 1px 1px 20px gray,
+        -1px -1px 20px gray;
+      }
+      &:nth-child(6){
         background-color: rgb(1,169,132);
         box-shadow: 1px 1px 20px rgb(1,169,132),
         -1px -1px 20px rgb(1,169,132);

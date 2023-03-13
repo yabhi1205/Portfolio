@@ -150,8 +150,9 @@
   }
   #contact{
     .left{
-      width: 80vw;
-      min-height: 50vh;
+      width: 60vw;
+      // min-height: 75vh;
+      // aspect-ratio: 4/3;
       img{
         width: 50%;
       }
@@ -172,8 +173,8 @@
   }
 
   #about{
+    text-shadow: 1px 3px 5px black;
     .aboutback{
-      background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0,0,0,0.6)),url("../images/dp.webp") fixed;
       background-position: center;
     }
     .abouttext{

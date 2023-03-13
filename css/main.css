@@ -324,10 +324,10 @@ header {
   color: #171515;
 }
 .header-strip a:nth-child(6) {
-  color: #0088CC;
+  color: rgb(1, 169, 132);
 }
 .header-strip a:nth-child(7) {
-  color: rgb(1, 169, 132);
+  color: gray;
 }
 .header-strip a:nth-child(8) {
   color: rgb(48, 200, 102);
@@ -359,11 +359,11 @@ header {
   background-color: #171515;
   box-shadow: 1px 1px 20px #171515, -1px -1px 20px #171515;
 }
-.header-strip a:hover:nth-child(6) {
-  background-color: #0088CC;
-  box-shadow: 1px 1px 20px #0088CC, -1px -1px 20px #0088CC;
-}
 .header-strip a:hover:nth-child(7) {
+  background-color: gray;
+  box-shadow: 1px 1px 20px gray, -1px -1px 20px gray;
+}
+.header-strip a:hover:nth-child(6) {
   background-color: rgb(1, 169, 132);
   box-shadow: 1px 1px 20px rgb(1, 169, 132), -1px -1px 20px rgb(1, 169, 132);
 }
@@ -670,7 +670,7 @@ main {
   position: absolute;
   bottom: 0;
   overflow: hidden;
-  background: url("../images/about-back.webp") fixed;
+  background: url("../images/about-back.jpg") fixed;
   background-position: center;
   background-size: cover;
 }
@@ -700,7 +700,7 @@ main {
 #post {
   width: 100vw;
   height: 110vh;
-  background: url("../images/post.jpg");
+  background: url("../images/post.jpg") fixed;
   position: relative;
 }
 #post button {
@@ -748,25 +748,29 @@ main {
   background: url("../images/contact-back.jpg") fixed center no-repeat;
   background-size: cover;
 }
+#contact * {
+  overflow: hidden;
+}
 #contact .left {
   border-radius: 5rem;
-  width: 70rem;
-  height: 100rem;
+  width: 60rem;
+  aspect-ratio: 12/16;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.8) !important;
-  box-shadow: 5px 5px 500px white, -5px -5px 500px white;
+  background-color: rgba(91, 91, 91, 0.8) !important;
+  box-shadow: 5px 5px 500px rgb(127, 126, 126), -5px -5px 500px rgb(97, 96, 96);
   transition: 0.3s all ease;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.556);
   padding: 2rem;
+  color: white;
 }
 #contact .left img {
-  width: 70%;
+  width: 50%;
   border-radius: 50%;
   transition: 0.3s all ease;
-  box-shadow: 2px 2px 10px black, inset 1px 1px 10px black;
+  box-shadow: 2px 2px 10px rgb(127, 127, 127);
 }
 #contact .left hr {
   width: 90% !important;
@@ -775,7 +779,7 @@ main {
   background-color: rgb(251, 245, 245) !important;
 }
 #contact .left p {
-  color: rgb(78, 76, 76);
+  color: rgb(207, 206, 206);
   font-size: 2rem;
   display: flex;
   justify-content: center;
@@ -785,7 +789,9 @@ main {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.556);
 }
 #contact .left p a {
+  padding: 1rem !important;
   margin-right: 2rem;
+  color: white;
 }
 #contact .left p i {
   margin-right: 0.5rem;
@@ -911,7 +917,7 @@ main {
     justify-content: center;
   }
   nav:hover .active b:nth-child(1),
-nav:hover .active b:nth-child(3) {
+  nav:hover .active b:nth-child(3) {
     width: 3rem;
   }
   nav:hover a {
@@ -933,9 +939,9 @@ nav:hover .active b:nth-child(3) {
     grid-template-columns: 1fr !important;
   }
   .skill h3,
-.skill ion-icon,
-.skill i,
-.skill span {
+  .skill ion-icon,
+  .skill i,
+  .skill span {
     font-size: 6rem !important;
   }
   .project {
@@ -944,8 +950,7 @@ nav:hover .active b:nth-child(3) {
     margin-bottom: 70px;
   }
   #contact .left {
-    width: 80vw;
-    min-height: 50vh;
+    width: 60vw;
   }
   #contact .left img {
     width: 50%;
@@ -962,8 +967,10 @@ nav:hover .active b:nth-child(3) {
   #contact .left:hover img {
     transform: none;
   }
+  #about {
+    text-shadow: 1px 3px 5px black;
+  }
   #about .aboutback {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/dp.webp") fixed;
     background-position: center;
   }
   #about .abouttext {
@@ -983,7 +990,7 @@ nav:hover .active b:nth-child(3) {
     font-size: 4rem;
   }
   .model1,
-.model2 {
+  .model2 {
     display: none !important;
   }
   #post {
