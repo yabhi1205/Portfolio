@@ -74,7 +74,7 @@ html{
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background: var(--black) url(../images/loader.gif) no-repeat center center;
+  background: black url(../images/loader.gif) no-repeat center center;
   z-index: 999999999;
   display: block;
 }
