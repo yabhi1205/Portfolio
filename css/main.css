@@ -86,6 +86,7 @@ html {
   border: 0;
   box-shadow: 5px 5px 20px black;
   transition: 0.2s all ease;
+  overflow: hidden;
 }
 .button a {
   color: #000;
@@ -553,9 +554,7 @@ main {
 .pro-6::after,
 .pro-6::before {
   width: 50%;
-}
-
-/* project==================================== */
+} /* project==================================== */
 #project {
   width: 100vw;
   height: 100vh;
@@ -606,7 +605,7 @@ main {
   color: white;
 }
 .project .project1 div a:hover img {
-  height: 85%;
+  height: 77%;
 }
 
 /* project==================================== */

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Abhishek Singhal</title>
+    <link rel="shortcut icon" href="images/logo1.webp" type="image/webp" />
+
+    <!-- css font awsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- css aos animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Alkatra', cursive;
+    }
+    body {
+      overflow-x: hidden;
+      background-color: black;
+    }
+    .preloader {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      background: black url(../images/loader.gif) no-repeat center center;
+      z-index: 999999999;
+      display: block;
+    }
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .col {
+      flex-direction: column;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    a{
+        width: 50px;
+        aspect-ratio: 1;
+        color: white;
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.659);
+        margin: 1rem;
+        display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9;
+      transition: .3s all ease;
+      text-decoration: none;
+    }
+    a:hover{
+        transform: scale(1.1);
+    }
+    a i ,a .iconify{
+        font-size: 1.5rem;
+    }
+    .proj {
+      /* height: 100vh; */
+      width: 98vw;
+      margin: auto;
+      padding: 2rem;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("images/project.jpeg") fixed;
+      background-position: center;
+      background-size: cover;
+      justify-content: space-around !important;
+      align-items: start;
+    }
+
+    .box {
+      width: 45%;
+      color: white;
+    }
+
+    .in {
+      width: 100%;
+      height: 90vh;
+      /* border: 1px solid pink; */
+      box-shadow: 5px 5px 15px rgb(77, 75, 75), -2px -2px 10px rgb(77, 75, 75);
+      border-radius: 20px;
+      margin-bottom: 2rem;
+      overflow: hidden;
+      transition: .3s all ease;
+    }
+    .in img {
+      width: 100%;
+    }
+    .in div {
+      margin: 2rem;
+    }
+    .in div h2{
+        font-size: 2rem;
+    }
+    .in div a{
+        width: 6.25rem;
+        height: 3.125rem;
+        border-radius: 20px;
+        font-size: 1rem;
+    }
+    .in:hover{
+        transform: scale(1.04);
+    }
+    .up {
+      width: 100%;
+      height: 40vh;
+      position: relative;
+      overflow: hidden;
+    }
+    .up img{
+        top: -10%;
+        left: -15px;
+        height: 100%;
+        position: absolute;
+        filter: opacity(.3);
+        z-index: 1;
+    }
+    @media (max-width: 1000px) {
+        html{
+            font-size: 80%;
+        }
+        .proj{
+            flex-direction: column;
+        }
+        .box{
+            width: 100%;
+        }
+        .in{
+            height: 80vh;
+        }
+    }
+  </style>
+  <body>
+    <!-- preloader--------------------------------------- -->
+    <div class="preloader"></div>
+    <!-- main -->
+    <div class="center proj">
+        <!-- box -->
+      <div class="box">
+        <div class="up center col">
+            <h1 data-aos="zoom-out-down" data-aos-delay="1100">Abhishek Singhal</h1>
+            <div class="center " style="justify-content: space-between;">
+                <a href="https://github.com/Abhimrt"  data-aos="zoom-in-right" data-aos-delay="1100"> <i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/abhishek-singhal-112001/" data-aos="zoom-in-right" data-aos-delay="1100"> <i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://abhimrt.github.io/Portfolio/" data-aos="zoom-in-left" data-aos-delay="1100"> <i class="fa-solid fa-user"></i></a>
+                <a href="https://leetcode.com/abhisinghal112001/" data-aos="zoom-in-left" data-aos-delay="1100">
+                    <i class="iconify" data-icon="simple-icons:leetcode"></i>
+                </a>
+                <img src="./images/selfTrans.png" data-aos="zoom-in-right" data-aos-delay="1100" alt="">
+          </div>
+        </div>
+        <div class="in" data-aos="zoom-in-right" data-aos-delay="1100">
+            <img src="./images/projects/problem.webp" alt="" />
+            <div>
+              <h2>Problem Cracker</h2>
+             <div class="center">
+              <!-- <a href="https://github.com/Abhimrt/bbl"> github</a> -->
+              <a href="https://problemcracker.tk/" data-aos="zoom-out-up"   > Explore</a>
+             </div>
+            </div>
+          </div>
+          <div class="in" data-aos="zoom-in-right">
+            <img src="./images/projects/gam-hub.webp" alt="" />
+            <div>
+              <h2>Gamehub</h2>
+             <div class="center">
+              <a href="https://github.com/Abhimrt/GameHub"data-aos="zoom-out-up" > github</a>
+              <a href="https://abhimrt.github.io/GameHub/"data-aos="zoom-out-up" > Explore</a>
+             </div>
+            </div>
+          </div>
+          <div class="in" data-aos="zoom-in-right">
+            <img src="./images/projects/typing.webp" alt="" />
+            <div>
+              <h2>Typing Test</h2>
+             <div class="center">
+              <a href="https://github.com/Abhimrt/as-typing-test"data-aos="zoom-out-up" > github</a>
+              <a href="https://abhimrt.github.io/as-typing-test/"data-aos="zoom-out-up" > Explore</a>
+             </div>
+            </div>
+          </div>
+          <div class="in" data-aos="zoom-in-right">
+            <img src="./images/projects/wwn.webp" alt="" />
+            <div>
+              <h2>Whatsapp without Number</h2>
+             <div class="center">
+              <a href="https://github.com/Abhimrt/WWN"data-aos="zoom-out-up" > github</a>
+              <a href="https://abhimrt.github.io/WWN/"data-aos="zoom-out-up" > Explore</a>
+             </div>
+            </div>
+          </div>
+          <div class="in" data-aos="zoom-in-right">
+            <img src="./images/projects/sos.webp" alt="" />
+            <div>
+              <h2>Sidekick of Semester</h2>
+             <div class="center">
+              <a href="https://github.com/Abhimrt/Sos"data-aos="zoom-out-up" > github</a>
+              <a href="https://abhimrt.github.io/Sos/"data-aos="zoom-out-up" > Explore</a>
+             </div>
+            </div>
+          </div>
+          <div class="in" data-aos="zoom-in-right">
+            <img src="./images/projects/battleground.webp" alt="" />
+            <div>
+              <h2>CSS Battleground</h2>
+             <div class="center">
+              <a href="https://github.com/Abhimrt/cssbattleground"data-aos="zoom-out-up" > github</a>
+              <a href="https://abhimrt.github.io/cssbattleground/"data-aos="zoom-out-up" > Explore</a>
+             </div>
+            </div>
+          </div>
+          <div class="in" data-aos="zoom-in-right">
+            <img src="./images/projects/climate.webp" alt="" />
+            <div>
+              <h2>Climate</h2>
+             <div class="center">
+              <a href="https://github.com/Abhimrt/Practice"data-aos="zoom-out-up" > github</a>
+              <a href="https://abhimrt.github.io/Practice/"data-aos="zoom-out-up" > Explore</a>
+             </div>
+            </div>
+          </div>
+          <div class="in" data-aos="zoom-in-right">
+            <img src="./images/projects/project2.webp" alt="" />
+            <div>
+              <h2>Project2</h2>
+             <div class="center">
+              <a href="https://github.com/Abhimrt/project2"data-aos="zoom-out-up" > github</a>
+              <a href="https://abhimrt.github.io/project2/"data-aos="zoom-out-up" > Explore</a>
+             </div>
+            </div>
+          </div>
+          <div class="in" data-aos="zoom-in-right">
+            <img src="./images/projects/project4.webp" alt="" />
+            <div>
+              <h2>Project4</h2>
+             <div class="center">
+              <a href="https://github.com/Abhimrt/project4"data-aos="zoom-out-up" > github</a>
+              <a href="https://abhimrt.github.io/project4/"data-aos="zoom-out-up" > Explore</a>
+             </div>
+            </div>
+          </div>
+      </div>
+      <!-- box -->
+      <div class="box">
+        <!--  -->
+        <div class="in" data-aos="zoom-in-left" data-aos-delay="1100">
+          <img src="./images/projects/bbl.webp" alt="" />
+          <div>
+            <h2>Garbage Mangement</h2>
+           <div class="center">
+            <a href="https://github.com/Abhimrt/bbl" data-aos="zoom-out-up"  data-aos-delay="1100"> github</a>
+            <a href="https://abhimrt.github.io/bbl/" data-aos="zoom-out-up"  data-aos-delay="1100"> Explore</a>
+           </div>
+          </div>
+        </div>
+        <div class="in" data-aos="zoom-in-left">
+            <img src="./images/projects/gapshap.webp" alt="" />
+            <div>
+              <h2>Gapshap</h2>
+             <div class="center">
+              <a href="https://github.com/Abhimrt/Gapshap"data-aos="zoom-out-up" > github</a>
+              <a href="https://abhimrt.github.io/Gapshap/"data-aos="zoom-out-up" > Explore</a>
+             </div>
+            </div>
+          </div>
+          <div class="in" data-aos="zoom-in-left">
+            <img src="./images/projects/note.webp" alt="" />
+            <div>
+              <h2>Note Manager</h2>
+             <div class="center">
+              <a href="https://github.com/Abhimrt/Notes-manger"data-aos="zoom-out-up" > github</a>
+              <a href="https://abhimrt.github.io/Notes-manger/"data-aos="zoom-out-up" > Explore</a>
+             </div>
+            </div>
+          </div>
+          <div class="in" data-aos="zoom-in-left">
+            <img src="./images/projects/basic.webp" alt="" />
+            <div>
+              <h2>Basic</h2>
+             <div class="center">
+              <a href="https://github.com/Abhimrt/basic"data-aos="zoom-out-up" > github</a>
+              <a href="https://abhimrt.github.io/basic/"data-aos="zoom-out-up" > Explore</a>
+             </div>
+            </div>
+          </div>
+          <div class="in" data-aos="zoom-in-left">
+            <img src="./images/projects/card.webp" alt="" />
+            <div>
+              <h2>Card</h2>
+             <div class="center">
+              <a href="https://github.com/Abhimrt/card"data-aos="zoom-out-up" > github</a>
+              <a href="https://abhimrt.github.io/card/"data-aos="zoom-out-up" > Explore</a>
+             </div>
+            </div>
+          </div>
+          <div class="in" data-aos="zoom-in-left">
+            <img src="./images/projects/car.webp" alt="" />
+            <div>
+              <h2>Car Game</h2>
+             <div class="center">
+              <a href="https://github.com/Abhimrt/car-game"data-aos="zoom-out-up" > github</a>
+              <a href="https://abhimrt.github.io/car-game/"data-aos="zoom-out-up" > Explore</a>
+             </div>
+            </div>
+          </div>
+          <div class="in" data-aos="zoom-in-left">
+            <img src="./images/projects/stopwatch.webp" alt="" />
+            <div>
+              <h2>Stopwatch</h2>
+             <div class="center">
+              <a href="https://github.com/Abhimrt/stopwatch"data-aos="zoom-out-up" > github</a>
+              <a href="https://abhimrt.github.io/stopwatch/"data-aos="zoom-out-up" > Explore</a>
+             </div>
+            </div>
+          </div>
+          <div class="in" data-aos="zoom-in-left">
+            <img src="./images/projects/project1.webp" alt="" />
+            <div>
+              <h2>Project1</h2>
+             <div class="center">
+              <a href="https://github.com/Abhimrt/Grid"data-aos="zoom-out-up" > github</a>
+              <a href="https://abhimrt.github.io/Grid/"data-aos="zoom-out-up" > Explore</a>
+             </div>
+            </div>
+          </div>
+          <div class="in" data-aos="zoom-in-left">
+            <img src="./images/projects/project3.webp" alt="" />
+            <div>
+              <h2>Project3</h2>
+             <div class="center">
+              <a href="https://github.com/Abhimrt/project3"data-aos="zoom-out-up" > github</a>
+              <a href="https://abhimrt.github.io/project3/"data-aos="zoom-out-up" > Explore</a>
+             </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- icon jsvascript -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+
+    <!-- main javascript -->
+    <script>
+      // =================pre loader========================
+      var loader = document.querySelector(".preloader");
+      var linksside = document.querySelector(".header-strip");
+      var shrink = document.querySelector(".shrink");
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          loader.style.display = "none";
+        }, 1000);
+      });
+    </script>
+    <!-- aos javascript -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 250, // offset (in px) from the original trigger point
+        duration: 800,
+      });
+    </script>
+  </body>
+</html>
+<!-- 
+    basic
+    { --
+        https://github.com/Abhimrt/basic
+        https://abhimrt.github.io/basic/
+    }
+    gapshap
+    { --
+        https://github.com/Abhimrt/Gapshap
+        https://abhimrt.github.io/Gapshap/
+    }
+    problem cracker 
+    { --
+        https://problemcracker.tk/
+    }
+    game hub
+    {  --
+        https://github.com/Abhimrt/GameHub
+        https://abhimrt.github.io/GameHub/
+    }
+    bbl{ --
+        https://github.com/Abhimrt/bbl
+        https://abhimrt.github.io/bbl/
+    }
+    note manager{ --
+        https://github.com/Abhimrt/Notes-manger
+        https://abhimrt.github.io/Notes-manger/
+    }
+    proj2{==
+        https://github.com/Abhimrt/project2
+        https://abhimrt.github.io/project2/
+    }
+    wwn{ --
+        https://github.com/Abhimrt/WWN
+        https://abhimrt.github.io/WWN/
+    }
+    p4{--
+        https://github.com/Abhimrt/project4
+        https://abhimrt.github.io/project4/#about
+    }
+    stopwatch{ --
+        https://github.com/Abhimrt/stopwatch
+        https://abhimrt.github.io/stopwatch/
+    }
+    css battleground{ --
+        https://github.com/Abhimrt/cssbattleground
+        https://abhimrt.github.io/cssbattleground/
+    }
+    card{ --
+        https://github.com/Abhimrt/card
+        https://abhimrt.github.io/card/
+    }
+    sos{ --
+        https://github.com/Abhimrt/Sos
+        https://abhimrt.github.io/Sos/
+    }
+    climate{ -- 
+        https://github.com/Abhimrt/Practice
+        https://abhimrt.github.io/Practice/
+    }
+    p3{ --
+        https://github.com/Abhimrt/project3
+        https://abhimrt.github.io/project3/
+    }
+    car game{ --
+        https://github.com/Abhimrt/car-game
+        https://abhimrt.github.io/car-game/
+    }
+    p1{ --
+        https://github.com/Abhimrt/Grid
+        https://abhimrt.github.io/Grid/
+    }
+    typing test{ --
+        https://github.com/Abhimrt/as-typing-test
+        https://abhimrt.github.io/as-typing-test/
+    }
+
+ -->

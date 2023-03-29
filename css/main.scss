@@ -33,6 +33,7 @@ html{
   align-items: center;
   flex-direction: column;
 }
+
 /* custom scroll bar */
 ::-webkit-scrollbar {
   width: 15px;
@@ -89,6 +90,7 @@ html{
   border: 0;
   box-shadow: 5px 5px 20px black;
   transition: .2s all ease;
+  overflow: hidden;
   a{
     color: #000;
     text-decoration: none;
